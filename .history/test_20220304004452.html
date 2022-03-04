@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcard</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+  </head>
+  <body>
+    <div id="app" class="w-[100%] flex align-start">
+      <div class="w-[50%] bg-[#374355] pt-[55px] pb-[72px] px-[20px]">
+        <div class="f-calistoga ml-[72px] mb-[20px] text-white">Flashcard</div>
+        <div class="text-white ml-[72px] text-2xl mb-[20px]">
+          Let's Learning Something New Today
+        </div>
+        <div class="rounded-full">
+          <img
+            src="./assets/img/login-image.png"
+            alt="Login"
+            class="block mx-auto"
+          />
+        </div>
+      </div>
+      <div class="w-[50%] p-[120px]">
+        <div class="f-calistoga mb-[20px] text-[#3a3a3a]">
+          Log in to Flashcard
+        </div>
+        <div class="text-xl text-[#6e6e6e] mb-[28px]">
+          Welcome back! login with your data that you entered during
+          registration
+        </div>
+        <div class="w-full">
+          <button
+            class="flex px-[15px] py-[15px] w-full justify-center box-shadow1 mb-[20px]"
+          >
+            <div>
+              <img
+                src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"
+                class="w-[50px] h-[50px]"
+              />
+            </div>
+            <p class="text-xl text-[#6e6e6e] leading-[50px] ml-[18px]">
+              Login with Facebook
+            </p>
+          </button>
+          <button
+            class="flex px-[15px] py-[15px] w-full justify-center box-shadow1"
+          >
+            <img
+              src="https://img.icons8.com/clouds/100/000000/google-logo.png"
+              class="w-[50px] h-[50px]"
+            />
+            <span class="text-xl text-[#6e6e6e] leading-[50px] ml-[18px]"
+              >Login with Google</span
+            >
+          </button>
+        </div>
+        <div class="line mt-[40px] mb-[30px]">
+          <span class="line-text">or</span>
+        </div>
+
+        <div class="flex p-[15px] bg-gray-200">
+          <div>
+            <ion-icon name="mail"></ion-icon>
+          </div>
+          <div>
+            <label for="name">Email</label>
+            <input type="text" id="name" />
+          </div>
+        </div>
+        <div>
+          <div>
+            <ion-icon name="lock-closed"></ion-icon>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <br />
+            <input type="password" id="password" />
+          </div>
+          <div>
+            <ion-icon name="eye"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Thư viện Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
