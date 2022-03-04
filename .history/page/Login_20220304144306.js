@@ -103,7 +103,7 @@ class Login {
     // Don't have account
     this.$question = document.createElement("p");
     this.$question.setAttribute("class", "text-center text-lg");
-    this.$question.innerText = "Don't have an account? ";
+    this.$question.innerText = "Don't have an account?";
 
     this.$register = document.createElement("a");
     this.$register.setAttribute("class", "underline font-medium");
@@ -143,8 +143,7 @@ class Login {
     this.$loginRight.appendChild(this.$buttonSubmit);
 
     // Don't have account
-    this.$question.appendChild(this.$register);
-    this.$loginRight.appendChild(this.$question);
+
     return this.$loginContainer;
   }
 }

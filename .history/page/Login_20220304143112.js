@@ -92,22 +92,7 @@ class Login {
     this.$password.$loginContainer.classList.add("justify-between");
 
     // Button
-    this.$buttonSubmit = document.createElement("button");
-    this.$buttonSubmit.type = "submit";
-    this.$buttonSubmit.setAttribute(
-      "class",
-      "px-[15px] py-[10px] bg-[#ff805d] color-white block w-full text-white text-lg uppercase mt-[20px] rounded-md mb-[30px]"
-    );
-    this.$buttonSubmit.innerText = "Login";
-
-    // Don't have account
-    this.$question = document.createElement("p");
-    this.$question.setAttribute("class", "text-center text-lg");
-    this.$question.innerText = "Don't have an account? ";
-
-    this.$register = document.createElement("a");
-    this.$register.setAttribute("class", "underline font-medium");
-    this.$register.innerText = "Register";
+    this.$button;
   }
   render() {
     // Left
@@ -138,13 +123,6 @@ class Login {
     // Input
     this.$loginRight.appendChild(this.$email.render());
     this.$loginRight.appendChild(this.$password.render(this.$eyeicon));
-
-    // Button
-    this.$loginRight.appendChild(this.$buttonSubmit);
-
-    // Don't have account
-    this.$question.appendChild(this.$register);
-    this.$loginRight.appendChild(this.$question);
     return this.$loginContainer;
   }
 }

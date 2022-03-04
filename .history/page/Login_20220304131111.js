@@ -1,5 +1,4 @@
 import SocialNetwork from "../components/socialNetwork.js";
-import InputLogin from "../components/inputLogin.js";
 
 class Login {
   constructor() {
@@ -69,45 +68,8 @@ class Login {
     );
 
     // Line
-    this.$Line = document.createElement("div");
-    this.$Line.setAttribute("class", "line mt-[40px] mb-[30px]");
-    this.$LineText = document.createElement("span");
-    this.$LineText.setAttribute("class", "line-text");
-    this.$LineText.innerText = "or";
-
-    // inputLogin
-    this.$email = new InputLogin("mail", "name", "Email", "text");
-    this.$eyeicon = document.createElement("ion-icon");
-    this.$eyeicon.setAttribute("name", "eye");
-    this.$eyeicon.setAttribute(
-      "class",
-      "w-[30px] h-[52px] float-left cursor-pointer"
-    );
-    this.$password = new InputLogin(
-      "lock-closed",
-      "password",
-      "Password",
-      "password"
-    );
-    this.$password.$loginContainer.classList.add("justify-between");
-
-    // Button
-    this.$buttonSubmit = document.createElement("button");
-    this.$buttonSubmit.type = "submit";
-    this.$buttonSubmit.setAttribute(
-      "class",
-      "px-[15px] py-[10px] bg-[#ff805d] color-white block w-full text-white text-lg uppercase mt-[20px] rounded-md mb-[30px]"
-    );
-    this.$buttonSubmit.innerText = "Login";
-
-    // Don't have account
-    this.$question = document.createElement("p");
-    this.$question.setAttribute("class", "text-center text-lg");
-    this.$question.innerText = "Don't have an account? ";
-
-    this.$register = document.createElement("a");
-    this.$register.setAttribute("class", "underline font-medium");
-    this.$register.innerText = "Register";
+    this.$loginRightLine = document.createElement("div");
+    this.$loginRightLine.setAttribute("class", "line mt-[40px] mb-[30px]");
   }
   render() {
     // Left
@@ -121,8 +83,6 @@ class Login {
     this.$loginContainer.appendChild(this.$loginRight);
     this.$loginRight.appendChild(this.$loginRightHeader);
     this.$loginRight.appendChild(this.$loginRightSubTitle);
-
-    // Social Network
     this.$loginRight.appendChild(this.$loginRightSocialNetwork);
     this.$loginRightSocialNetwork.appendChild(
       this.$buttonSocialFacebook.render()
@@ -130,21 +90,6 @@ class Login {
     this.$loginRightSocialNetwork.appendChild(
       this.$buttonSocialGoogle.render()
     );
-
-    // Line
-    this.$loginRight.appendChild(this.$Line);
-    this.$Line.appendChild(this.$LineText);
-
-    // Input
-    this.$loginRight.appendChild(this.$email.render());
-    this.$loginRight.appendChild(this.$password.render(this.$eyeicon));
-
-    // Button
-    this.$loginRight.appendChild(this.$buttonSubmit);
-
-    // Don't have account
-    this.$question.appendChild(this.$register);
-    this.$loginRight.appendChild(this.$question);
     return this.$loginContainer;
   }
 }
