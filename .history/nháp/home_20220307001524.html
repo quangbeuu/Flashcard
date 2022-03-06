@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning with flashcards - for free!!</title>
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="../assets/img/logo-icon.png" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- container -->
+      <div>
+        <!-- Header -->
+        <div
+          class="max-h-[63px] flex items-center justify-between py-[15px] px-[20px] fixed bg-white z-30 w-full border border-b-[0.0625rem] solid"
+        >
+          <!-- Left -->
+          <div class="flex items-center">
+            <!-- logo -->
+            <div>
+              <a href="">
+                <img
+                  src="../assets/img/logo2.png"
+                  alt="logo"
+                  class="h-[48px]"
+                />
+              </a>
+            </div>
+            <!-- Menu -->
+            <ul
+              class="flex text-[16px] font-medium text-[#2e3856] items-center"
+            >
+              <li class="ml-[16px]"><a href="#">Home</a></li>
+              <li class="ml-[16px]"><a href="#">Mindmap</a></li>
+              <li class="ml-[16px]"><a href="#">About</a></li>
+              <li>
+                <button
+                  type="submit"
+                  class="text-[16px] font-medium ml-[18px] px-[12px] py-[6px] bg-[#8fb397] text-white rounded-[0.25rem] hover:bg-[#4b8063] transition duration-100ms ease-in"
+                >
+                  Create
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- Right -->
+          <div class="text-[#2e3856]">
+            <button
+              type="submit"
+              class="text-[16px] font-medium mr-[18px] px-[12px] py-[6px] bg-white rounded-[0.25rem] hover:bg-[#f6f7fb] transition duration-100ms ease-in"
+            >
+              Log in
+            </button>
+            <button
+              type="submit"
+              class="text-[16px] font-medium px-[12px] py-[6px] bg-[#ffcd1f] rounded-[0.25rem] hover:bg-[#ffdc62] transition duration-100ms ease-in"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+        <!-- Poster -->
+        <div class="w-full bg-[#4b8063] p-[64px]">
+          <div class="mt-[64px] w-full h-full relative bg-radient z-2">
+            <img
+              src="../img-test/img02.jpg"
+              alt="logo-poster"
+              class="h-[640px] w-[1300px] rounded-[1.5rem] object-cover block"
+            />
+            <div
+              class="absolute bottom-0 z-20 flex justify-between w-full items-center"
+            >
+              <div class="text-white max-w-[30rem] m-[48px]">
+                <h1 class="text-[44px] font-bold mb-[16px]">
+                  Learn for your future. MindCard.
+                </h1>
+                <p class="text-[20px] font-normal">
+                  With our ever-effective flashcards, eye-catching mindmap
+                  system, get a suite of science-backed study tools at your
+                  fingertips.
+                </p>
+              </div>
+              <button
+                class="text-[16px] text-white font-semibold px-[32px] py-[20px] bg-[#8fb397] rounded-lg hover:bg-[#4b8063] m-[48px] transition duration-100ms ease-in"
+              >
+                Get started
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Why -->
+        <section class="px-[162px] mb-[100px]">
+          <div>
+            <h1
+              class="text-[44px] text-[#303545] font-bold w-full text-center pt-[100px]"
+            >
+              Why should study with MindCard?
+            </h1>
+            <p class="yellow-line"></p>
+          </div>
+          <div class="grid-custom mt-[100px]">
+            <div class="text-center">
+              <img
+                src="../img-test/nopaper.jpg"
+                alt="Flashcards on repeat"
+                class="w-[496px] h-[386px] rounded-3xl object-cover"
+              />
+            </div>
+            <div class="pt-[60px]">
+              <h1 class="text-[32px] font-bold text-center leading-[40px]">
+                Goodbye paper
+              </h1>
+              <p class="text-[20px] text-center font-light mt-[46px]">
+                Making paper flashcards is a time-consuming exercise that, in
+                the end, will be more oriented on the textual part rather than
+                on the visual one. Also, using a standard set of supplied
+                flashcards will likely not fit the personal ways students learn.
+              </p>
+            </div>
+          </div>
+          <div class="grid-custom mt-[100px]">
+            <div class="pt-[60px]">
+              <h1 class="text-[32px] font-bold text-center leading-[40px]">
+                Make learning into a game
+              </h1>
+              <p class="text-[20px] text-center font-light mt-[46px]">
+                Our brain needs to be challenged in order to make learning more
+                interesting and, as a consequence, more effective. This is a
+                simple, yet powerful, technique and we promise that you will
+                enjoy its effectiveness on the day of the exam!
+              </p>
+            </div>
+            <div class="text-center">
+              <img
+                src="../img-test/girl-green.jpg"
+                alt="Flashcards on repeat"
+                class="w-[496px] h-[386px] rounded-3xl object-cover"
+              />
+            </div>
+          </div>
+          <div class="grid-custom mt-[100px]">
+            <div class="text-center">
+              <img
+                src="../img-test/savetime.jpg"
+                alt="Flashcards on repeat"
+                class="w-[496px] h-[386px] rounded-3xl object-cover"
+              />
+            </div>
+            <div class="pt-[60px]">
+              <h1 class="text-[32px] font-bold text-center leading-[40px]">
+                Save time
+              </h1>
+              <p class="text-[20px] text-center font-light mt-[46px]">
+                You can make in less than 5 minutes on our flashcard maker app?
+                Give it a try, you won’t be disappointed!
+              </p>
+            </div>
+          </div>
+          <div class="grid-custom mt-[100px]">
+            <div class="pt-[60px]">
+              <h1 class="text-[32px] font-bold text-center leading-[40px]">
+                Study Everywhere You Want
+              </h1>
+              <p class="text-[20px] text-center font-light mt-[46px]">
+                MindCard will be with you anywhere you go. On your laptop at the
+                bar, on your phone in the tube, there are no restrictions.
+                Revise your old flashcard sets while taking a coffee at the bar,
+                make some cool new ones in the library while commuting in the
+                tube, technology puts no limits to learning!
+              </p>
+            </div>
+            <div class="text-center">
+              <img
+                src="../img-test/gir-blue.jpg"
+                alt="Flashcards on repeat"
+                class="w-[496px] h-[386px] rounded-3xl object-cover"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- Slider -->
+        <section class="px-[162px] mb-[100px]">
+          <div>
+            <h1 class="text-[44px] text-[#303545] font-bold w-full text-center">
+              User reviews!!!
+            </h1>
+            <p class="yellow-line"></p>
+          </div>
+          <!-- slider-container -->
+          <div class="mt-[60px]">
+            <!-- slider-item -->
+            <div class="text-center">
+              <h3 class="text-[30px] font-bold quote-custom">
+                Quizlet gives me an easy way to revise, which I can do on the go
+                with the Quizlet app!
+              </h3>
+              <p class="text-[#a9a9a9] text-semibold text-[16px] mt-[24px]">
+                - kkubina0110, age 20
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Get start -->
+        <section class="text-center">
+          <p class="text-[24px] font-bold">
+            Ready to start getting better results?
+          </p>
+          <button
+            class="text-[16px] text-white font-semibold px-[32px] py-[20px] bg-[#8fb397] rounded-lg hover:bg-[#4b8063] mt-[20px] transition duration-100ms ease-in"
+          >
+            Get started
+          </button>
+        </section>
+        <footer class="bg-[#4b8063]">
+          <div>
+            <a href="">
+              <img
+                src="../assets/img/logo2.png"
+                alt="logo"
+                class="bg-white h-[48px]"
+              />
+            </a>
+          </div>
+          <!-- Social -->
+          <div>
+            <div
+              class="w-[30px] h-[30px] bg-white flex items-center justify-center rounded-full"
+            >
+              <a href="">
+                <img
+                  src="https://img.icons8.com/material-rounded/24/000000/facebook-f--v1.png"
+                  class="w-[25px] h-[25px]"
+                />
+              </a>
+            </div>
+            <div
+              class="w-[30px] h-[30px] bg-white flex items-center justify-center rounded-full"
+            >
+              <a href="">
+                <img
+                  src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"
+                />
+              </a>
+            </div>
+            <div class="w-[30px] h-[30px]">
+              <a href="">
+                <img
+                  src="https://img.icons8.com/ios-glyphs/30/000000/youtube-play.png"
+                />
+              </a>
+            </div>
+            <div class="w-[30px] h-[30px]">
+              <a href="">
+                <img
+                  src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png"
+                />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- Thư viện Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+  </body>
+</html>
