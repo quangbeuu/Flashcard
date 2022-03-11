@@ -1,0 +1,110 @@
+[
+  {
+    "last_updated_at": {
+      "$date": "2022-1-15T22:20:20.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Nên mua vàng để tăng tài sản cá nhân không?",
+    "content": "Một số nhà đầu tư đổ xô đi mua vàng với hy vọng kiếm lời nhưng cũng chuẩn bị sẵn tâm thế đón lỗ. Từ quan điểm của một nhà kinh tế học, theo ông các nhà đầu tư có nên tìm cách tăng tài sản của mình theo cách này không?",
+    "expert_id": "621639d447f4c679847176d7",
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-16T15:39:39.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Các nhà đầu tư nên bỏ tiền vào đâu?",
+    "content": "Đâu là nơi tốt nhất các nhà đầu tư cá nhân nên bỏ tiền vào lúc này?",
+    "expert_id": "621639d447f4c679847176d3",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-17T08:20:19.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Vấn đề giá vàng tăng vọt trong thời gian qua",
+    "content": "Ông đánh giá thế nào về thị trường vàng và các yếu tố ảnh hưởng đến việc giá vàng tăng vọt trong thời gian qua?",
+    "expert_id": "621639d447f4c679847176db",
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-19T08:21:19.264Z"
+    },
+    "topic": ["Khoa học kỹ thuật"],
+    "title": "Biện pháp an toàn trong công việc kỹ thuật",
+    "content": "Thưa ông, những biện pháp an toàn để có để kiểm tra công việc kỹ thuật và đảm bảo rằng không có rủi ro nghề nghiệp?",
+    "expert_id": "62165fba43d9c7cea4e2d074",
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "status": "REFUSE",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-19T08:21:19.264Z"
+    },
+    "topic": ["Khoa học kỹ thuật"],
+    "title": "Truyền đạt các khái niệm kỹ thuật với các đối tượng không chuyên",
+    "content": "Là dân kỹ thuật, thưa ông làm cách nào để truyền đạt các khái niệm kỹ thuật với các đối tượng không chuyên một cách hiệu quả nhất?",
+    "expert_id": "62165fba43d9c7cea4e2d076",
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-1-18T18:18:18.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Giải pháp cân bằng thị trường vốn và tín dụng",
+    "content": "Thưa ông, đâu là giải pháp cân bằng thị trường vốn và tín dụng?",
+    "expert_id": "62165e3943d9c7cea4e2d020",
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-18T18:18:18.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Nên mua thêm chứng chỉ Quỹ ENF vào thời điểm hiện tại?",
+    "content": "Xin ông có thể cho cho khách hàng lời khuyên về việc có nên mua thêm chứng chỉ Quỹ ENF vào thời điểm hiện tại?",
+    "expert_id": "621639d447f4c679847176e8",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-19T19:19:19.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Thưa ông, các nhà đầu tư, khách hàng quan tâm đến Quỹ ENF có thể liên lạc với công ty qua kênh nào?",
+    "expert_id": "621639d447f4c679847176e8",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-19T19:19:19.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Chiến lược hoạt động đầu tư của Quỹ ENF trong giai đoạn thị trường chứng khoán Việt Nam đang bị ảnh hưởng tiêu cực bởi đại dịch COVID-19 là gì?",
+    "expert_id": "621639d447f4c679847176e8",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "REFUSE",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  }
+]

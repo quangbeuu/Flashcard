@@ -1,0 +1,230 @@
+[
+  {
+    "createdAt": {
+      "$date": "2022-1-15T22:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-16T09:53:18.487Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "Title": "Nên mua vàng để tăng tài sản cá nhân không?",
+    "content": "Một số nhà đầu tư đổ xô đi mua vàng với hy vọng kiếm lời nhưng cũng chuẩn bị sẵn tâm thế đón lỗ. Từ quan điểm của một nhà kinh tế học, theo ông các nhà đầu tư có nên tìm cách tăng tài sản của mình theo cách này không?",
+    "responses": [
+      {
+        "content": "Nên mua nhé",
+        "expert_id": "621639d447f4c679847176d7"
+      },
+      {
+        "content": "Không nên mua nhé",
+        "expert_id": "621639d447f4c679847176d3"
+      },
+      {
+        "content": "Mua cũng được mà không mua cũng được",
+        "expert_id": "621639d447f4c679847176db"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "uid": "61f20583fe549f5cfd99cd6a",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-1-18T20:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-19T10:23:18.487Z"
+    },
+    "topic": ["Tài nguyên môi trường"],
+    "Title": "Thông tin về các phương pháp nông nghiệp hữu cơ và các hệ thống quản lý",
+    "content": "Tôi có thể nhận được thông tin về các phương pháp nông nghiệp hữu cơ và các hệ thống quản lý ở đâu?",
+    "responses": [
+      {
+        "content": "Facebook",
+        "expert_id": "61db03af640545e22cadfd04"
+      },
+      {
+        "content": "Instagram",
+        "expert_id": "61db03af640545e22cadfd05"
+      },
+      {
+        "content": "Youtube",
+        "expert_id": "61db03af640545e22cadfd06"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "uid": "61f20583fe549f5cfd99cd6a",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-05-09T19:18:18.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-05-10T10:23:18.487Z"
+    },
+    "topic": ["Pháp luật"],
+    "Title": "Luật sở hữu trí tuệ",
+    "content": "1. Các bước tiến hành để đăng kí nhãn hiệu tại Cục Sở hữu trí tuệ là gì ? 2. Trong thời gian bao lâu thì nhãn hiệu đăng kí nhận được quyết định bảo hộ của Cục Sở hữu trí tuệ ? 3. Thời gian sử dụng nhãn hiệu sau khi được cấp bảo hộ của Cục Sở hữu trí tuệ là bao lâu ? 4. Mức phí phải nộp để đăng kí bảo hộ nhãn hiệu là bao nhiêu ?",
+    "responses": [
+      {
+        "content": "Các bước tiến hành để đăng ký nhãn hiệu tại Cục Sở hữu trí tuệ:",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      },
+      {
+        "content": "Chuẩn bị 10 mẫu nhãn hiệu",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      },
+      {
+        "content": "Cung cấp tên và địa chỉ của chủ đơn nhãn hiệu",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "uid": "61f20583fe549f5cfd99cd6c",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-1-18T20:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-19T10:23:18.487Z"
+    },
+    "topic": ["Pháp luật"],
+    "Title": "Luật sở hữu trí tuệ",
+    "content": "1. Các bước tiến hành để đăng kí nhãn hiệu tại Cục Sở hữu trí tuệ là gì ? 2. Trong thời gian bao lâu thì nhãn hiệu đăng kí nhận được quyết định bảo hộ của Cục Sở hữu trí tuệ ? 3. Thời gian sử dụng nhãn hiệu sau khi được cấp bảo hộ của Cục Sở hữu trí tuệ là bao lâu ? 4. Mức phí phải nộp để đăng kí bảo hộ nhãn hiệu là bao nhiêu ?",
+    "responses": [
+      {
+        "content": "Các bước tiến hành để đăng ký nhãn hiệu tại Cục Sở hữu trí tuệ:",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      },
+      {
+        "content": "Chuẩn bị 10 mẫu nhãn hiệu",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      },
+      {
+        "content": "Cung cấp tên và địa chỉ của chủ đơn nhãn hiệu",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "uid": "61f20583fe549f5cfd99cd6c",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-1-18T20:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-19T10:23:18.487Z"
+    },
+    "topic": ["Pháp luật"],
+    "Title": "Luật sở hữu trí tuệ",
+    "content": "1. Các bước tiến hành để đăng kí nhãn hiệu tại Cục Sở hữu trí tuệ là gì ? 2. Trong thời gian bao lâu thì nhãn hiệu đăng kí nhận được quyết định bảo hộ của Cục Sở hữu trí tuệ ? 3. Thời gian sử dụng nhãn hiệu sau khi được cấp bảo hộ của Cục Sở hữu trí tuệ là bao lâu ? 4. Mức phí phải nộp để đăng kí bảo hộ nhãn hiệu là bao nhiêu ?",
+    "responses": [
+      {
+        "content": "Các bước tiến hành để đăng ký nhãn hiệu tại Cục Sở hữu trí tuệ:",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      },
+      {
+        "content": "Chuẩn bị 10 mẫu nhãn hiệu",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      },
+      {
+        "content": "Cung cấp tên và địa chỉ của chủ đơn nhãn hiệu",
+        "expert_id": "621662c743d9c7cea4e2d316"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "uid": "61f20583fe549f5cfd99cd6c",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-01-17T08:20:19.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-19T01:20:19.264Z"
+    },
+    "topic": ["Truyền thông đa phương tiện"],
+    "Title": "Đối phó với những bình luận tiêu cực hoặc khủng hoảng thương hiệu",
+    "content": "Bà sẽ làm thế nào để đối phó với những bình luận tiêu cực hoặc khủng hoảng thương hiệu",
+    "responses": [
+      {
+        "content": "Việc nhận về những phản ứng, bình luận tiêu cực hoặc khủng hoảng truyền thông là điều không còn xa lạ với người làm Giám đốc truyền thông hay bất cứ doanh nghiệp nào. Vấn đề ở đây là bạn làm sao xử lý chúng? Lấy ví dụ và đưa ra biện pháp khắc phục hiệu quả.",
+        "expert_id": "621660d843d9c7cea4e2d157"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "uid": "61f20583fe549f5cfd99cd6b",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-1-18T20:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-19T10:23:18.487Z"
+    },
+    "topic": ["Truyền thông đa phương tiện"],
+    "Title": "Chiến lược tìm khách hàng tiềm năng",
+    "content": "Chiến lược nào đang được bà sử dụng để tìm kiếm khách hàng tiềm năng?",
+    "responses": [
+      {
+        "content": "Bạn có thể phác thảo ra 2 hoặc 3 chiến lược cụ thể sẽ đưa cho khách hàng tiềm năng thông qua kênh bán hàng, lấy được ví dụ cụ thể đã làm trong quá khứ càng tốt.",
+        "expert_id": "621660d843d9c7cea4e2d157"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "uid": "61f20583fe549f5cfd99cd6b",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-2-19T20:29:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-02-20T10:23:18.487Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "Title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Khách hàng/nhà đầu tư hiện đang sở hữu chứng chỉ Quỹ ENF – đã mua chứng chỉ Quỹ ENF - có nên bán ra và hoán đổi hình thức đầu tư sang dạng đầu tư khác vào thời điểm này không?",
+    "responses": [
+      {
+        "content": "Với tư cách là người quản lý quỹ đầu tư, từ góc độ cá nhân cũng như lý thuyết chung về đầu tư, chúng tôi luôn tư vấn cho khách hàng “không bỏ trứng vào một giỏ”. Khách hàng nên đa dạng hóa các hoạt động đầu tư tài chính cá nhân vào các loại tài sản khác nhau. Đầu tư vào chứng chỉ quỹ mở chỉ là một trong các lực chọn đầu tư",
+        "expert_id": "621639ef47f4c679847176ef"
+      },
+      {
+        "content": "Đầu tư vào các quỹ đầu tư nên hướng tới việc đầu tư dài hạn. Các nhà đầu tư nên cân nhắc kỹ các điều kiện của cá nhân, các yếu tố rủi ro và thuận lợi khi đầu tư vào các loại quỹ đầu tư sao cho phù hợp nhu cầu cá nhân và hướng đến mục tiêu lâu dài. ",
+        "expert_id": "621639ef47f4c679847176ef"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "uid": "61f20583fe549f5cfd99cd68",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-2-19T19:19:19.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-02-20T10:23:18.487Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "Title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Thưa ông, các nhà đầu tư, khách hàng quan tâm đến Quỹ ENF có thể liên lạc với công ty qua kênh nào?",
+    "responses": [
+      {
+        "content": "Trong giai đoạn này, các hoạt động giao dịch chứng chỉ Quỹ ENF vẫn được tiến hành như thường lệ. Nhà đầu tư có nhu cầu mua hoặc bán chứng chỉ Quỹ ENF, xin vui lòng liên hệ với các đại lý phân phối được Eastspring Việt Nam chỉ định theo danh sách sau:",
+        "expert_id": "621639d447f4c679847176e8"
+      },
+      {
+        "content": "Công ty TNHH chứng khoán ACB ",
+        "expert_id": "621639d447f4c679847176e8"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "uid": "61f20583fe549f5cfd99cd68",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "last_updated_at": {
+      "$date": "2022-1-15T22:20:20.264Z"
+    },
+    "topic": ["technology", "machine learning"],
+    "title": "Nên mua vàng để tăng tài sản cá nhân không?",
+    "content": "Một số nhà đầu tư đổ xô đi mua vàng với hy vọng kiếm lời nhưng cũng chuẩn bị sẵn tâm thế đón lỗ. Từ quan điểm của một nhà kinh tế học, theo ông các nhà đầu tư có nên tìm cách tăng tài sản của mình theo cách này không?",
+    "expert_id": "621639d447f4c679847176d7",
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-16T15:39:39.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Các nhà đầu tư nên bỏ tiền vào đâu?",
+    "content": "Đâu là nơi tốt nhất các nhà đầu tư cá nhân nên bỏ tiền vào lúc này?",
+    "expert_id": "621639d447f4c679847176d3",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-17T08:20:19.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Vấn đề giá vàng tăng vọt trong thời gian qua",
+    "content": "Ông đánh giá thế nào về thị trường vàng và các yếu tố ảnh hưởng đến việc giá vàng tăng vọt trong thời gian qua?",
+    "expert_id": "621639d447f4c679847176d3",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  }
+]

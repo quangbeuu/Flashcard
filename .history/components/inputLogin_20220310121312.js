@@ -27,6 +27,10 @@ class InputLogin {
     this.$inputItem.setAttribute("class", "outline-0 bg-[#f3f3f3] text-lg");
   }
 
+  getValue() {
+    return this.$inputItem.value();
+  }
+
   render(eyeicon) {
     this.$loginContainer.appendChild(this.$flexDiv);
     this.$flexDiv.appendChild(this.$loginIcon);

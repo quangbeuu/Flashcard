@@ -1,0 +1,182 @@
+[
+  {
+    "last_updated_at": {
+      "$date": "2022-1-15T22:20:20.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Nên mua vàng để tăng tài sản cá nhân không?",
+    "content": "Một số nhà đầu tư đổ xô đi mua vàng với hy vọng kiếm lời nhưng cũng chuẩn bị sẵn tâm thế đón lỗ. Từ quan điểm của một nhà kinh tế học, theo ông các nhà đầu tư có nên tìm cách tăng tài sản của mình theo cách này không?",
+    "expert_id": "621639d447f4c679847176d7",
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-16T15:39:39.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Các nhà đầu tư nên bỏ tiền vào đâu?",
+    "content": "Đâu là nơi tốt nhất các nhà đầu tư cá nhân nên bỏ tiền vào lúc này?",
+    "expert_id": "621639d447f4c679847176d3",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-17T08:20:19.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Vấn đề giá vàng tăng vọt trong thời gian qua",
+    "content": "Ông đánh giá thế nào về thị trường vàng và các yếu tố ảnh hưởng đến việc giá vàng tăng vọt trong thời gian qua?",
+    "expert_id": "621639d447f4c679847176db",
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-19T08:21:19.264Z"
+    },
+    "topic": ["Khoa học kỹ thuật"],
+    "title": "Biện pháp an toàn trong công việc kỹ thuật",
+    "content": "Thưa ông, những biện pháp an toàn để có để kiểm tra công việc kỹ thuật và đảm bảo rằng không có rủi ro nghề nghiệp?",
+    "expert_id": "62165fba43d9c7cea4e2d074",
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "status": "REFUSE",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-19T08:21:19.264Z"
+    },
+    "topic": ["Khoa học kỹ thuật"],
+    "title": "Truyền đạt các khái niệm kỹ thuật với các đối tượng không chuyên",
+    "content": "Là dân kỹ thuật, thưa ông làm cách nào để truyền đạt các khái niệm kỹ thuật với các đối tượng không chuyên một cách hiệu quả nhất?",
+    "expert_id": "62165fba43d9c7cea4e2d076",
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-1-18T18:18:18.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Giải pháp cân bằng thị trường vốn và tín dụng",
+    "content": "Thưa ông, đâu là giải pháp cân bằng thị trường vốn và tín dụng?",
+    "expert_id": "62165e3943d9c7cea4e2d020",
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-18T18:18:18.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Nên mua thêm chứng chỉ Quỹ ENF vào thời điểm hiện tại?",
+    "content": "Xin ông có thể cho cho khách hàng lời khuyên về việc có nên mua thêm chứng chỉ Quỹ ENF vào thời điểm hiện tại?",
+    "expert_id": "621639d447f4c679847176e8",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-19T19:19:19.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Thưa ông, các nhà đầu tư, khách hàng quan tâm đến Quỹ ENF có thể liên lạc với công ty qua kênh nào?",
+    "expert_id": "621639d447f4c679847176e8",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-19T20:29:20.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Chiến lược hoạt động đầu tư của Quỹ ENF trong giai đoạn thị trường chứng khoán Việt Nam đang bị ảnh hưởng tiêu cực bởi đại dịch COVID-19 là gì?",
+    "expert_id": "621639d447f4c679847176e8",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "REFUSE",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-2-19T20:29:20.264Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "title": "Kênh liên lạc đến Quỹ ENF",
+    "content": "Khách hàng/nhà đầu tư hiện đang sở hữu chứng chỉ Quỹ ENF – đã mua chứng chỉ Quỹ ENF - có nên bán ra và hoán đổi hình thức đầu tư sang dạng đầu tư khác vào thời điểm này không?",
+    "expert_id": "621639ef47f4c679847176ef",
+    "customer_id": "61f20583fe549f5cfd99cd68",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-01-17T08:20:19.264Z"
+    },
+    "topic": ["Truyền thông đa phương tiện"],
+    "title": "Đối phó với những bình luận tiêu cực hoặc khủng hoảng thương hiệu",
+    "content": "Bà sẽ làm thế nào để đối phó với những bình luận tiêu cực hoặc khủng hoảng thương hiệu?",
+    "expert_id": "621660d843d9c7cea4e2d157",
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-03-08-T08:00:00.264Z"
+    },
+    "topic": ["Truyền thông đa phương tiện"],
+    "title": "Chiến lược tìm khách hàng tiềm năng",
+    "content": "Chiến lược nào đang được bà sử dụng để tìm kiếm khách hàng tiềm năng?",
+    "expert_id": "621660d843d9c7cea4e2d157",
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-03-08-T08:00:00.264Z"
+    },
+    "topic": ["Truyền thông đa phương tiện"],
+    "title": "Chiến lược tìm khách hàng tiềm năng",
+    "content": "Chiến lược nào đang được bà sử dụng để tìm kiếm khách hàng tiềm năng?",
+    "expert_id": "621660d843d9c7cea4e2d157",
+    "customer_id": "61f20583fe549f5cfd99cd6b",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-05-09T18:18:18.264Z"
+    },
+    "topic": ["Pháp luật"],
+    "title": "Luật sở hữu trí tuệ",
+    "content": "Tôi có sáng chế đang trong thời gian chờ Cục Sở hữu trí tuệ cấp bằng độc quyền sáng chế. Hiện nay, sáng chế của tôi đã được Cục Sở hữu trí tuệ cấp quyết định chấp nhận đơn hợp lệ. Vậy bước tiếp theo xin Luật sư tư vấn giúp để tôi được rõ những vấn đề như sau: 1. Thời gian này sáng chế của tôi có nên gửi tới Cục Sở hữu trí tuệ đơn xin công bố sớm không ? 2. Sáng chế có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm thì có lợi gì và bất lợi gì ? 3. Sáng chế không có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm thì có lợi gì và bất lợi gì? 4. Thời gian nộp đơn đề nghị Cục Sở hữu trí tuệ công bố sớm cho sáng chế là trong khoảng thời gian nào ? 5. Sáng chế được Cục Sở hữu trí tuệ công bố có phải là cho xã hội biết về cách tạo ra sản phẩm của sáng chế đó hay không ? 6. Thời gian nhận được bằng độc quyền sáng chế do Cục Sở hữu trí tuệ cấp giữa sáng chế có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm và sáng chế không có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm có khác nhau hay không ?",
+    "expert_id": "621662c743d9c7cea4e2d316",
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  },
+  {
+    "last_updated_at": {
+      "$date": "2022-05-09T18:18:18.264Z"
+    },
+    "topic": ["Pháp luật"],
+    "title": "Luật sở hữu trí tuệ",
+    "content": "Tôi có sáng chế đang trong thời gian chờ Cục Sở hữu trí tuệ cấp bằng độc quyền sáng chế. Hiện nay, sáng chế của tôi đã được Cục Sở hữu trí tuệ cấp quyết định chấp nhận đơn hợp lệ. Vậy bước tiếp theo xin Luật sư tư vấn giúp để tôi được rõ những vấn đề như sau: 1. Thời gian này sáng chế của tôi có nên gửi tới Cục Sở hữu trí tuệ đơn xin công bố sớm không ? 2. Sáng chế có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm thì có lợi gì và bất lợi gì ? 3. Sáng chế không có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm thì có lợi gì và bất lợi gì? 4. Thời gian nộp đơn đề nghị Cục Sở hữu trí tuệ công bố sớm cho sáng chế là trong khoảng thời gian nào ? 5. Sáng chế được Cục Sở hữu trí tuệ công bố có phải là cho xã hội biết về cách tạo ra sản phẩm của sáng chế đó hay không ? 6. Thời gian nhận được bằng độc quyền sáng chế do Cục Sở hữu trí tuệ cấp giữa sáng chế có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm và sáng chế không có đơn đề nghị Cục Sở hữu trí tuệ công bố sớm có khác nhau hay không ?",
+    "expert_id": "621662c743d9c7cea4e2d316",
+    "customer_id": "61f20583fe549f5cfd99cd6c",
+    "status": "ACCEPTED",
+    "_class": "org.vietsearch.essme.model.request_response.DirectRequest"
+  }
+]

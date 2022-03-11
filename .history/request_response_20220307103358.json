@@ -1,0 +1,59 @@
+[
+  {
+    "createdAt": {
+      "$date": "thông tin về các phương pháp nông nghiệp hữu cơ và các hệ thống quản lý"
+    },
+    "updatedAt": {
+      "$date": "2022-02-27T09:53:18.487Z"
+    },
+    "topic": ["string"],
+    "Title": "string",
+    "content": "string",
+    "responses": [
+      {
+        "content": "string",
+        "expert_id": "string",
+        "uid": "string"
+      }
+    ],
+    "customer_id": "string",
+    "uid": "aXGcptOeLZeJZny3okOVnUqykPS2",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "_id": {
+      "$oid": "622026ae35e1af0db0032c06"
+    },
+    "updatedAt": {
+      "$date": "2022-03-03T03:02:06.876Z"
+    },
+    "topic": ["IT", "Marketing"],
+    "Title": "adasfsdafsadfasfs",
+    "content": "content",
+    "responses": [
+      {
+        "content": "content",
+        "expert_id": "e1"
+      },
+      {
+        "content": "content",
+        "expert_id": "e2"
+      },
+      {
+        "content": "content",
+        "expert_id": "e2"
+      },
+      {
+        "content": "content",
+        "expert_id": "e2"
+      },
+      {
+        "content": "content",
+        "expert_id": "e2"
+      }
+    ],
+    "customer_id": "c3",
+    "uid": "bfEUFLG3Bjg70iN3gITUKvzyDqw1",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  }
+]

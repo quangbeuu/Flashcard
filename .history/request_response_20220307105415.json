@@ -1,0 +1,58 @@
+[
+  {
+    "createdAt": {
+      "$date": "2022-1-15T22:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-16T09:53:18.487Z"
+    },
+    "topic": ["Kinh tế và kinh doanh"],
+    "Title": "Nên mua vàng để tăng tài sản cá nhân không?",
+    "content": "Một số nhà đầu tư đổ xô đi mua vàng với hy vọng kiếm lời nhưng cũng chuẩn bị sẵn tâm thế đón lỗ. Từ quan điểm của một nhà kinh tế học, theo ông các nhà đầu tư có nên tìm cách tăng tài sản của mình theo cách này không?",
+    "responses": [
+      {
+        "content": "Nên mua nhé",
+        "expert_id": "621639d447f4c679847176d7"
+      },
+      {
+        "content": "Không nên mua nhé",
+        "expert_id": "621639d447f4c679847176d3"
+      },
+      {
+        "content": "Mua cũng được mà không mua cũng được",
+        "expert_id": "621639d447f4c679847176db"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "uid": "61f20583fe549f5cfd99cd6a",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  },
+  {
+    "createdAt": {
+      "$date": "2022-1-18T20:20:20.264Z"
+    },
+    "updatedAt": {
+      "$date": "2022-01-19T10:23:18.487Z"
+    },
+    "topic": ["Tài nguyên môi trường"],
+    "Title": "Thông tin về các phương pháp nông nghiệp hữu cơ và các hệ thống quản lý",
+    "content": "Tôi có thể nhận được thông tin về các phương pháp nông nghiệp hữu cơ và các hệ thống quản lý ở đâu?",
+    "responses": [
+      {
+        "content": "Facebook",
+        "expert_id": "61db03af640545e22cadfd04"
+      },
+      {
+        "content": "Instagram",
+        "expert_id": "61db03af640545e22cadfd05"
+      },
+      {
+        "content": "Youtube",
+        "expert_id": "61db03af640545e22cadfd06"
+      }
+    ],
+    "customer_id": "61f20583fe549f5cfd99cd6a",
+    "uid": "61f20583fe549f5cfd99cd6a",
+    "_class": "org.vietsearch.essme.model.request_response.Request"
+  }
+]
