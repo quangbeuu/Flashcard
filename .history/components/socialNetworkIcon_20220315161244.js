@@ -1,0 +1,8 @@
+class SocialNetworkIcon {
+    constructor(){
+
+    }
+
+    render()
+}
+

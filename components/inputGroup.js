@@ -1,9 +1,9 @@
 class InputGroup {
   constructor(iconType, idInput, labelText, inputType) {
-    this.$loginContainer = document.createElement("div");
-    this.$loginContainer.setAttribute(
+    this.$inputContainer = document.createElement("div");
+    this.$inputContainer.setAttribute(
       "class",
-      "flex px-[20px] py-[14px] bg-[#f3f3f3] rounded-lg items-center mb-[20px]"
+      "flex px-[20px] py-[14px] bg-[#f3f3f3] rounded-xl items-center mt-[40px] relative z-10 border border-[2px] solid border-transparent"
     );
 
     this.$flexDiv = document.createElement("div");
@@ -32,15 +32,15 @@ class InputGroup {
   }
 
   render(eyeicon) {
-    this.$loginContainer.appendChild(this.$flexDiv);
+    this.$inputContainer.appendChild(this.$flexDiv);
     this.$flexDiv.appendChild(this.$loginIcon);
     this.$flexDiv.appendChild(this.$inputWrap);
     this.$inputWrap.appendChild(this.$loginLabel);
     this.$inputWrap.appendChild(this.$inputItem);
     if (eyeicon) {
-      this.$loginContainer.appendChild(eyeicon);
+      this.$inputContainer.appendChild(eyeicon);
     }
-    return this.$loginContainer;
+    return this.$inputContainer;
   }
 }
 

@@ -1,0 +1,5 @@
+class SectionItem {
+  constructor() {}
+
+  render() {}
+}

@@ -74,7 +74,7 @@ class Register {
       "Password",
       "password"
     );
-    this.$password.$loginContainer.classList.add("justify-between");
+    this.$password.$inputContainer.classList.add("justify-between");
 
     this.$confirmPassword = new InputGroup(
       "shield-checkmark",
