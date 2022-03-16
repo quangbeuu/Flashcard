@@ -8,9 +8,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { auth } from "../constants/common.js";
 import MessageError from "../components/messageError.js";
-import Main from "./Main.js";
-import app from "../index.js";
-import Register from "./Register.js";
 
 class Login {
   constructor() {
@@ -139,7 +136,6 @@ class Login {
       "underline font-medium cursor-pointer text-[#ff805d]"
     );
     this.$register.innerText = "Register";
-    this.$register.addEventListener("click", this.goToRegisterPage);
 
     // errorMessage
     this.$errorEmail = new MessageError();
@@ -148,11 +144,6 @@ class Login {
     this.$errorPassword = new MessageError();
     this.$errorPassword.$errorContainer.classList.add("hidden");
   }
-  // Go to Register Page
-  goToRegisterPage = () => {
-    const registerScreen = new Register();
-    app.setActiveScreen(registerScreen);
-  };
   // Sign in with Facebook
   signInWithFacebook = async (e) => {
     e.preventDefault();
@@ -162,10 +153,6 @@ class Login {
       provider.addScope("email");
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
     } catch (error) {
       alert(error.message);
     }
@@ -177,10 +164,7 @@ class Login {
     try {
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
+      console.log(user);
     } catch (error) {
       alert(error.message);
     }
@@ -248,11 +232,6 @@ class Login {
         loginEmail,
         loginPassword
       );
-      const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
     } catch (error) {
       alert(error.message);
     }
@@ -298,9 +277,7 @@ class Login {
     // Don't have account
     this.$question.appendChild(this.$register);
     this.$loginRight.appendChild(this.$question);
-    // return this.$inputContainer;
-
-    container.appendChild(this.$inputContainer);
+    return this.$inputContainer;
   }
 }
 

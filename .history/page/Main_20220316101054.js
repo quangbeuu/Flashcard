@@ -10,6 +10,10 @@ class Main {
     // Header
     this.$header = new Header();
 
+    this.$header.$buttonLogIn.$buttonCreate.addEventListener(
+      "click",
+      this.goToLoginPage
+    );
     // Poster
     this.$poster = document.createElement("div");
     this.$poster.setAttribute("class", "w-full bg-[#4b8063] p-[64px]");
@@ -146,6 +150,11 @@ class Main {
     // Footer
     this.$footer = new Footer();
   }
+
+  goToLoginPage = () => {
+    const loginScreen = new Login();
+    app.setActiveScreen(loginScreen);
+  };
 
   render(container) {
     // Header

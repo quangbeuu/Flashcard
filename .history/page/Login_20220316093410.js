@@ -139,7 +139,7 @@ class Login {
       "underline font-medium cursor-pointer text-[#ff805d]"
     );
     this.$register.innerText = "Register";
-    this.$register.addEventListener("click", this.goToRegisterPage);
+    this.$register.addEventListener("click");
 
     // errorMessage
     this.$errorEmail = new MessageError();
@@ -151,7 +151,6 @@ class Login {
   // Go to Register Page
   goToRegisterPage = () => {
     const registerScreen = new Register();
-    app.setActiveScreen(registerScreen);
   };
   // Sign in with Facebook
   signInWithFacebook = async (e) => {
@@ -162,10 +161,6 @@ class Login {
       provider.addScope("email");
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
     } catch (error) {
       alert(error.message);
     }
@@ -177,10 +172,7 @@ class Login {
     try {
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
+      console.log(user);
     } catch (error) {
       alert(error.message);
     }

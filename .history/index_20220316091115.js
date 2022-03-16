@@ -1,8 +1,7 @@
 import Login from "./page/Login.js";
 import Register from "./page/Register.js";
 import Main from "./page/Main.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { auth } from "./constants/common.js";
+
 class App {
   _activeScreen;
   constructor(view) {
@@ -10,23 +9,25 @@ class App {
     // view ta sẽ truyền vào thằng div id = app
   }
 
-  onAuthenticationListener() {
-    onAuthStateChanged(auth, (user) => {});
-  }
-
   setActiveScreen(screen) {
+    console.log(this._activeScreen);
     if (this._activeScreen) {
+      console.log(this.view);
       this.view.innerHTML = "";
     }
     this._activeScreen = screen;
     screen.render(this.view);
+    console.log(this._activeScreen);
   }
 }
 const view = document.getElementById("app");
 
 const app = new App(view);
-const register = new Register();
+
 const login = new Login();
-app.setActiveScreen(login);
+const register = new Register();
+const main = new Main();
+
+view.appendChild(register);
 
 export default app;

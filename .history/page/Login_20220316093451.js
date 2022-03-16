@@ -162,10 +162,6 @@ class Login {
       provider.addScope("email");
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
     } catch (error) {
       alert(error.message);
     }
@@ -177,10 +173,7 @@ class Login {
     try {
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
+      console.log(user);
     } catch (error) {
       alert(error.message);
     }

@@ -3,7 +3,6 @@ import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebase
 import { auth } from "../constants/common.js";
 import MessageError from "../components/messageError.js";
 import Login from "./Login.js";
-import app from "../index.js";
 
 class Register {
   constructor() {
@@ -120,7 +119,6 @@ class Register {
       "underline font-medium cursor-pointer text-[#ff805d]"
     );
     this.$login.innerText = "Log in";
-    this.$login.addEventListener("click", this.goToLoginPage);
 
     // errorMessage
     this.$errorUsername = new MessageError();
@@ -135,11 +133,7 @@ class Register {
     this.$errorConfirmPassword = new MessageError();
     this.$errorConfirmPassword.$errorContainer.classList.add("hidden");
   }
-  // Go to Login Page
-  goToLoginPage = () => {
-    const loginScreen = new Login();
-    app.setActiveScreen(loginScreen);
-  };
+
   // Validate username
   validateUsername = () => {
     const userName = this.$username.getValue();
@@ -248,17 +242,17 @@ class Register {
         const user = response.user;
         if (user) {
           const loginScreen = new Login();
-          app.setActiveScreen(loginScreen);
+          app. 
         } else {
-          alert("Đăng ký không thành công");
+          alert("Ko Successful");
         }
       }
     } catch (error) {
-      alert(error.message);
+      alert(error);
     }
   };
 
-  render(container) {
+  render() {
     //Left
     this.$registerContainer.appendChild(this.$registerLeft);
     this.$registerLeft.appendChild(this.$registerLeftHeader);
@@ -292,8 +286,7 @@ class Register {
     this.$registerRight.appendChild(this.$goToLogin);
     this.$goToLogin.appendChild(this.$login);
 
-    // return this.$registerContainer;
-    container.appendChild(this.$registerContainer);
+    return this.$registerContainer;
   }
 }
 

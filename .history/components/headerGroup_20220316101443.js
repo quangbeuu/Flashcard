@@ -1,7 +1,4 @@
 import ButtonGroup from "./buttonGroup.js";
-import Login from "../page/Login.js";
-import Register from "../page/Register.js";
-import app from "../index.js";
 class Header {
   constructor() {
     this.$headerContainer = document.createElement("div");
@@ -67,11 +64,6 @@ class Header {
       this.goToRegisterPage
     );
   }
-
-  goToRegisterPage = () => {
-    const registerScreen = new Register();
-    app.setActiveScreen(registerScreen);
-  };
 
   goToLoginPage = () => {
     const loginScreen = new Login();

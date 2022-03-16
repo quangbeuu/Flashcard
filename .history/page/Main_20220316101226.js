@@ -147,6 +147,11 @@ class Main {
     this.$footer = new Footer();
   }
 
+  goToLoginPage = () => {
+    const loginScreen = new Login();
+    app.setActiveScreen(loginScreen);
+  };
+
   render(container) {
     // Header
     this.$mainContainer.appendChild(this.$header.render());

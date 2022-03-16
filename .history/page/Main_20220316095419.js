@@ -1,8 +1,6 @@
 import Header from "../components/headerGroup.js";
 import SectionItem from "../components/sectionItem.js";
 import Footer from "../components/footerGroup.js";
-import Login from "../page/Login.js";
-import app from "../index.js";
 
 class Main {
   constructor() {
@@ -10,6 +8,7 @@ class Main {
     // Header
     this.$header = new Header();
 
+    this.$header.$buttonLogIn.addEventListener("click");
     // Poster
     this.$poster = document.createElement("div");
     this.$poster.setAttribute("class", "w-full bg-[#4b8063] p-[64px]");

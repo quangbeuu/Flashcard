@@ -120,7 +120,6 @@ class Register {
       "underline font-medium cursor-pointer text-[#ff805d]"
     );
     this.$login.innerText = "Log in";
-    this.$login.addEventListener("click", this.goToLoginPage);
 
     // errorMessage
     this.$errorUsername = new MessageError();
@@ -135,11 +134,7 @@ class Register {
     this.$errorConfirmPassword = new MessageError();
     this.$errorConfirmPassword.$errorContainer.classList.add("hidden");
   }
-  // Go to Login Page
-  goToLoginPage = () => {
-    const loginScreen = new Login();
-    app.setActiveScreen(loginScreen);
-  };
+
   // Validate username
   validateUsername = () => {
     const userName = this.$username.getValue();
@@ -254,7 +249,7 @@ class Register {
         }
       }
     } catch (error) {
-      alert(error.message);
+      alert(error);
     }
   };
 

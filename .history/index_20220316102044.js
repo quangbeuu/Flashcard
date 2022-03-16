@@ -10,10 +10,6 @@ class App {
     // view ta sẽ truyền vào thằng div id = app
   }
 
-  onAuthenticationListener() {
-    onAuthStateChanged(auth, (user) => {});
-  }
-
   setActiveScreen(screen) {
     if (this._activeScreen) {
       this.view.innerHTML = "";

@@ -177,10 +177,7 @@ class Login {
     try {
       const response = await signInWithPopup(auth, provider);
       const user = response.user;
-      if (user) {
-        const mainScreen = new Main();
-        app.setActiveScreen(mainScreen);
-      }
+      console.log(user);
     } catch (error) {
       alert(error.message);
     }

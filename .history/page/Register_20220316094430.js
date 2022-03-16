@@ -136,10 +136,7 @@ class Register {
     this.$errorConfirmPassword.$errorContainer.classList.add("hidden");
   }
   // Go to Login Page
-  goToLoginPage = () => {
-    const loginScreen = new Login();
-    app.setActiveScreen(loginScreen);
-  };
+  goToLoginPage = () => {};
   // Validate username
   validateUsername = () => {
     const userName = this.$username.getValue();

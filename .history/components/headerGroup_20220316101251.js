@@ -1,7 +1,4 @@
 import ButtonGroup from "./buttonGroup.js";
-import Login from "../page/Login.js";
-import Register from "../page/Register.js";
-import app from "../index.js";
 class Header {
   constructor() {
     this.$headerContainer = document.createElement("div");
@@ -57,21 +54,8 @@ class Header {
     this.$headerRight.setAttribute("class", "text-[#2e3856]");
 
     this.$buttonLogIn = new ButtonGroup("Log in", "white", "#f6f7fb");
-    this.$buttonLogIn.$buttonCreate.addEventListener(
-      "click",
-      this.goToLoginPage
-    );
     this.$buttonSignUp = new ButtonGroup("Sign up", "#ffcd1f", "#ffdc62");
-    this.$buttonSignUp.$buttonCreate.addEventListener(
-      "click",
-      this.goToRegisterPage
-    );
   }
-
-  goToRegisterPage = () => {
-    const registerScreen = new Register();
-    app.setActiveScreen(registerScreen);
-  };
 
   goToLoginPage = () => {
     const loginScreen = new Login();

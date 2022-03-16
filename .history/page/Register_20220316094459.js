@@ -137,8 +137,7 @@ class Register {
   }
   // Go to Login Page
   goToLoginPage = () => {
-    const loginScreen = new Login();
-    app.setActiveScreen(loginScreen);
+    const loginScreen = new Login()''
   };
   // Validate username
   validateUsername = () => {
