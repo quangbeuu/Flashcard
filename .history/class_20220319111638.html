@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindcard</title>
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="../assets/img/logo-icon.png" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Firebase -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAK6P2INzgIpGS06Oz6tUEyAeNmhMkVaqw",
+        authDomain: "mindcard-99b06.firebaseapp.com",
+        projectId: "mindcard-99b06",
+        storageBucket: "mindcard-99b06.appspot.com",
+        messagingSenderId: "126145243100",
+        appId: "1:126145243100:web:65a78f889a318dea729119",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div
+        class="fixed w-full h-full bg-[rgba(0,0,0,0.25)] z-50 flex justify-center items-center"
+      >
+        <!-- Content -->
+        <div class="w-[600px] relative bg-white">
+          <div class="bg-[#4257b2] p-8 w-full flex justify-between">
+            <h1 class="text-[30px] font-bold text-white">Create a new class</h1>
+            <ion-icon name="close-outline" class="w-[16px]"></ion-icon>
+          </div>
+          <div class="p-8">
+            <div class="mb-[20px]">
+              <input
+                type="text"
+                placeholder="Enter a class name"
+                class="outline-none border-none w-full mb-[10px] text-[18px]"
+              />
+              <span class="block h-[2px] bg-black w-full"></span>
+              <span
+                class="mt-[10px] text-[14px] font-semibold text-[#939bb4] uppercase"
+                >Class name</span
+              >
+            </div>
+            <div class="mb-[20px]">
+              <input
+                type="text"
+                placeholder="Enter a description"
+                class="outline-none border-none w-full mb-[10px] text-[18px]"
+              />
+              <span class="block h-[2px] bg-black w-full"></span>
+              <span
+                class="mt-[10px] text-[14px] font-semibold text-[#939bb4] uppercase"
+                >Description</span
+              >
+            </div>
+            <button
+              class="p-6 bg-[#3ccfcf] w-full text-[18px] font-bold text-white"
+            >
+              Create class
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Thư viện Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- index.js -->
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
