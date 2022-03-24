@@ -1,5 +1,6 @@
 import {
   doc,
+  updateDoc,
   collection,
   addDoc,
   onSnapshot,
@@ -168,22 +169,19 @@ class Header {
     const className = this.$modalClassnameInput.value;
     const newClassDocument = {
       className: className,
+      classId: "",
     };
 
     const classRef = collection(db, "classes");
     const document = await addDoc(classRef, newClassDocument);
+
+    const classIdFireStore = doc(db, "classes", document.id);
     console.log("Doc", document.id);
     const url = new URL(window.location);
     url.searchParams.set("roomId", document.id);
     window.history.pushState({}, "", url);
 
-    const oneDocumentRef = doc(db, "classes", document.id);
-    onSnapshot(oneDocumentRef, (doc) => {
-      const data = doc.data();
-      const classLearnPage = new ClassLearn(data);
-      app.setActiveScreen(classLearnPage);
-    });
-    this.getClassByid(document.id);
+    this.getClassByid(doc.id);
   };
 
   goToRegisterPage = () => {
@@ -196,20 +194,19 @@ class Header {
     app.setActiveScreen(loginScreen);
   };
 
-  // getClassByid = (id) => {
-  //   // const classRef = collection(db, "classes");
-  //   // console.log(classRef);
-  //   // const q = query(classRef, where(classRef.id, "==", id));
-  //   // onSnapshot(q, (snapshot) => {
-  //   //   snapshot.docChanges().forEach((change) => {
-  //   //     if (change.type === "added") {
-  //   //       const data = change.doc.data();
-  //   //       const classLearnPage = new ClassLearn(data);
-  //   //       app.setActiveScreen(classLearnPage);
-  //   //     }
-  //   //   });
-  //   // });
-  // };
+  getClassByid = (id) => {
+    const classRef = collection(db, "classes");
+    const q = query(classRef, where("classId", "==", id));
+    onSnapshot(q, (snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === "added") {
+          const data = change.doc.data();
+          const classLearnPage = new ClassLearn(data);
+          app.setActiveScreen(classLearnPage);
+        }
+      });
+    });
+  };
 
   render(container) {
     this.$headerContainer.appendChild(this.$headerLeft);

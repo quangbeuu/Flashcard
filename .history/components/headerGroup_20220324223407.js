@@ -179,7 +179,7 @@ class Header {
 
     const oneDocumentRef = doc(db, "classes", document.id);
     onSnapshot(oneDocumentRef, (doc) => {
-      const data = doc.data();
+      const data = change.doc.data();
       const classLearnPage = new ClassLearn(data);
       app.setActiveScreen(classLearnPage);
     });
@@ -196,20 +196,20 @@ class Header {
     app.setActiveScreen(loginScreen);
   };
 
-  // getClassByid = (id) => {
-  //   // const classRef = collection(db, "classes");
-  //   // console.log(classRef);
-  //   // const q = query(classRef, where(classRef.id, "==", id));
-  //   // onSnapshot(q, (snapshot) => {
-  //   //   snapshot.docChanges().forEach((change) => {
-  //   //     if (change.type === "added") {
-  //   //       const data = change.doc.data();
-  //   //       const classLearnPage = new ClassLearn(data);
-  //   //       app.setActiveScreen(classLearnPage);
-  //   //     }
-  //   //   });
-  //   // });
-  // };
+  getClassByid = (id) => {
+    // const classRef = collection(db, "classes");
+    // console.log(classRef);
+    // const q = query(classRef, where(classRef.id, "==", id));
+    // onSnapshot(q, (snapshot) => {
+    //   snapshot.docChanges().forEach((change) => {
+    //     if (change.type === "added") {
+    //       const data = change.doc.data();
+    //       const classLearnPage = new ClassLearn(data);
+    //       app.setActiveScreen(classLearnPage);
+    //     }
+    //   });
+    // });
+  };
 
   render(container) {
     this.$headerContainer.appendChild(this.$headerLeft);

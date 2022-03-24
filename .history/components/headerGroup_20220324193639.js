@@ -1,5 +1,10 @@
+import ButtonGroup from "./buttonGroup.js";
+import Login from "../page/Login.js";
+import Register from "../page/Register.js";
+import app from "../index.js";
+import { mockData } from "../assets/mockData.js";
+import ClassLearn from "../page/ClassLearn.js";
 import {
-  doc,
   collection,
   addDoc,
   onSnapshot,
@@ -8,12 +13,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
 import { db } from "../constants/common.js";
-import ButtonGroup from "./buttonGroup.js";
-import Login from "../page/Login.js";
-import Register from "../page/Register.js";
-import app from "../index.js";
-import { mockData } from "../assets/mockData.js";
-import ClassLearn from "../page/ClassLearn.js";
 class Header {
   constructor() {
     this.$headerContainer = document.createElement("div");
@@ -137,14 +136,19 @@ class Header {
 
     this.$modalClassnameLabel.innerText = "Classname";
 
-    this.$modalCreateButton = document.createElement("button");
+    this.$modalCreateButton = document.createElement("a");
     this.$modalCreateButton.setAttribute(
       "class",
-      "p-6 bg-[#8fb397] w-full text-[18px] font-bold text-white hover:bg-[#4b8063] transition linear duration-100"
+      "block text-center cursor-pointer p-6 bg-[#8fb397] w-full text-[18px] font-bold text-white hover:bg-[#4b8063] transition linear duration-100"
     );
-    this.$modalCreateButton.type = "submit";
     this.$modalCreateButton.innerText = "Create class";
     this.$modalCreateButton.addEventListener("click", this.goToClassLearnPage);
+
+    // Url
+    this.urlSearchParams = new URLSearchParams(window.location.search);
+    this.classId = this.urlSearchParams.get("id");
+
+    // this.getClassByid("123");
   }
   showModal = (e) => {
     e.preventDefault();
@@ -162,28 +166,19 @@ class Header {
     );
   };
 
-  goToClassLearnPage = async (e) => {
+  goToClassLearnPage = (e) => {
     e.preventDefault();
     // push data to firestore
     const className = this.$modalClassnameInput.value;
     const newClassDocument = {
+      classID: "123",
       className: className,
     };
 
     const classRef = collection(db, "classes");
-    const document = await addDoc(classRef, newClassDocument);
-    console.log("Doc", document.id);
-    const url = new URL(window.location);
-    url.searchParams.set("roomId", document.id);
-    window.history.pushState({}, "", url);
+    addDoc(classRef, newClassDocument);
 
-    const oneDocumentRef = doc(db, "classes", document.id);
-    onSnapshot(oneDocumentRef, (doc) => {
-      const data = doc.data();
-      const classLearnPage = new ClassLearn(data);
-      app.setActiveScreen(classLearnPage);
-    });
-    this.getClassByid(document.id);
+    this.getClassByid("123");
   };
 
   goToRegisterPage = () => {
@@ -196,20 +191,21 @@ class Header {
     app.setActiveScreen(loginScreen);
   };
 
-  // getClassByid = (id) => {
-  //   // const classRef = collection(db, "classes");
-  //   // console.log(classRef);
-  //   // const q = query(classRef, where(classRef.id, "==", id));
-  //   // onSnapshot(q, (snapshot) => {
-  //   //   snapshot.docChanges().forEach((change) => {
-  //   //     if (change.type === "added") {
-  //   //       const data = change.doc.data();
-  //   //       const classLearnPage = new ClassLearn(data);
-  //   //       app.setActiveScreen(classLearnPage);
-  //   //     }
-  //   //   });
-  //   // });
-  // };
+  getClassByid = (id) => {
+    const classRef = collection(db, "classes");
+    const q = query(classRef, where("classID", "==", id));
+    onSnapshot(q, (snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === "added") {
+          const data = change.doc.data();
+          this.$modalCreateButton.href = `index.html?id=${data.classId}`;
+          const classLearnPage = new ClassLearn(data);
+          classLearnPage.$className.innerText = data.className;
+          app.setActiveScreen(classLearnPage);
+        }
+      });
+    });
+  };
 
   render(container) {
     this.$headerContainer.appendChild(this.$headerLeft);

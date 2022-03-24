@@ -1,5 +1,10 @@
+import ButtonGroup from "./buttonGroup.js";
+import Login from "../page/Login.js";
+import Register from "../page/Register.js";
+import app from "../index.js";
+import { mockData } from "../assets/mockData.js";
+import ClassLearn from "../page/ClassLearn.js";
 import {
-  doc,
   collection,
   addDoc,
   onSnapshot,
@@ -8,12 +13,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
 import { db } from "../constants/common.js";
-import ButtonGroup from "./buttonGroup.js";
-import Login from "../page/Login.js";
-import Register from "../page/Register.js";
-import app from "../index.js";
-import { mockData } from "../assets/mockData.js";
-import ClassLearn from "../page/ClassLearn.js";
 class Header {
   constructor() {
     this.$headerContainer = document.createElement("div");
@@ -145,6 +144,12 @@ class Header {
     this.$modalCreateButton.type = "submit";
     this.$modalCreateButton.innerText = "Create class";
     this.$modalCreateButton.addEventListener("click", this.goToClassLearnPage);
+
+    // // Url
+    // this.urlSearchParams = new URLSearchParams(window.location.search);
+    // this.classId = this.urlSearchParams.get("id");
+
+    // this.getClassByid("123");
   }
   showModal = (e) => {
     e.preventDefault();
@@ -171,19 +176,14 @@ class Header {
     };
 
     const classRef = collection(db, "classes");
-    const document = await addDoc(classRef, newClassDocument);
-    console.log("Doc", document.id);
+    const doc = await addDoc(classRef, newClassDocument);
+    console.log("Doc", doc.id);
     const url = new URL(window.location);
-    url.searchParams.set("roomId", document.id);
+    url.searchParams.set("roomId", doc.id);
     window.history.pushState({}, "", url);
-
-    const oneDocumentRef = doc(db, "classes", document.id);
-    onSnapshot(oneDocumentRef, (doc) => {
-      const data = doc.data();
-      const classLearnPage = new ClassLearn(data);
-      app.setActiveScreen(classLearnPage);
-    });
-    this.getClassByid(document.id);
+    const classLearnPage = new ClassLearn(data);
+            app.setActiveScreen(classLearnPage);
+    // this.getClassByid("123");
   };
 
   goToRegisterPage = () => {
@@ -197,18 +197,18 @@ class Header {
   };
 
   // getClassByid = (id) => {
-  //   // const classRef = collection(db, "classes");
-  //   // console.log(classRef);
-  //   // const q = query(classRef, where(classRef.id, "==", id));
-  //   // onSnapshot(q, (snapshot) => {
-  //   //   snapshot.docChanges().forEach((change) => {
-  //   //     if (change.type === "added") {
-  //   //       const data = change.doc.data();
-  //   //       const classLearnPage = new ClassLearn(data);
-  //   //       app.setActiveScreen(classLearnPage);
-  //   //     }
-  //   //   });
-  //   // });
+  //   const classRef = collection(db, "classes");
+  //   const q = query(classRef, where("classID", "==", id));
+  //   onSnapshot(q, (snapshot) => {
+  //     snapshot.docChanges().forEach((change) => {
+  //       if (change.type === "added") {
+  //         const data = change.doc.data();
+  //         // this.$modalCreateButton.href = `index.html?id=${data.classId}`;
+  //         const classLearnPage = new ClassLearn(data);
+  //         app.setActiveScreen(classLearnPage);
+  //       }
+  //     });
+  //   });
   // };
 
   render(container) {

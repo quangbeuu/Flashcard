@@ -111,7 +111,8 @@ class ClassLearn {
     this.$inviteLinkInput = document.createElement("input");
     this.$inviteLinkInput.disabled;
     this.$inviteLinkInput.type = "text";
-    this.$inviteLinkInput.value = window.location.href;
+    this.$inviteLinkInput.value =
+      "Mindcarddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
     this.$inviteLinkInput.setAttribute(
       "class",
       "border border-[2px] border-black rounded-md px-[12px] py-[6px]"
@@ -202,6 +203,3 @@ class ClassLearn {
 }
 
 export default ClassLearn;
-
-// `https://www.dictionaryapi.com/api/v3/references/learners/json/${word}?key=${apiKey}`
-// "967010e7-0354-451e-b1ef-1b7db4abaae8"

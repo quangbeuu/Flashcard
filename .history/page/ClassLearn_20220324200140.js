@@ -1,10 +1,12 @@
-import {
-  getDoc,
-  doc,
-} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 import Header from "../components/headerGroup.js";
 import ClassIcon from "../components/ClassIcon.js";
-import { db } from "../constants/common.js";
+import {
+  collection,
+  addDoc,
+  onSnapshot,
+  query,
+  where,
+} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 class ClassLearn {
   constructor(data) {
     const url = new URLSearchParams(window.location.search);
@@ -37,6 +39,7 @@ class ClassLearn {
       "class",
       "text-[35px] font-semibold ml-[18px]"
     );
+    this.$className.innerText = data.className;
 
     // Class Icon
     this.$classIconWrap = document.createElement("div");
@@ -111,7 +114,8 @@ class ClassLearn {
     this.$inviteLinkInput = document.createElement("input");
     this.$inviteLinkInput.disabled;
     this.$inviteLinkInput.type = "text";
-    this.$inviteLinkInput.value = window.location.href;
+    this.$inviteLinkInput.value =
+      "Mindcarddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
     this.$inviteLinkInput.setAttribute(
       "class",
       "border border-[2px] border-black rounded-md px-[12px] py-[6px]"
@@ -125,20 +129,9 @@ class ClassLearn {
     this.$inviteLinkButton.innerText = "Copy";
 
     this.$inviteLinkButton.addEventListener("click", this.copyInputValue);
-
-    this.getDocById();
   }
 
-  getDocById = async () => {
-    const classRef = doc(db, "classes", this.roomId);
-    const docSnap = await getDoc(classRef);
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      this.$className.innerText = data.className;
-    } else {
-      alert("Error");
-    }
-  };
+  getDocById = () => {};
 
   copyInputValue = (e) => {
     e.preventDefault();
@@ -202,6 +195,3 @@ class ClassLearn {
 }
 
 export default ClassLearn;
-
-// `https://www.dictionaryapi.com/api/v3/references/learners/json/${word}?key=${apiKey}`
-// "967010e7-0354-451e-b1ef-1b7db4abaae8"

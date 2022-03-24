@@ -111,7 +111,8 @@ class ClassLearn {
     this.$inviteLinkInput = document.createElement("input");
     this.$inviteLinkInput.disabled;
     this.$inviteLinkInput.type = "text";
-    this.$inviteLinkInput.value = window.location.href;
+    this.$inviteLinkInput.value =
+      "Mindcarddddddddddddddddddddddddddddddddddddddddddddddddddddddd";
     this.$inviteLinkInput.setAttribute(
       "class",
       "border border-[2px] border-black rounded-md px-[12px] py-[6px]"
@@ -133,7 +134,7 @@ class ClassLearn {
     const classRef = doc(db, "classes", this.roomId);
     const docSnap = await getDoc(classRef);
     if (docSnap.exists()) {
-      const data = docSnap.data();
+      console.log("aaaaa", docSnap.data());
       this.$className.innerText = data.className;
     } else {
       alert("Error");
@@ -202,6 +203,3 @@ class ClassLearn {
 }
 
 export default ClassLearn;
-
-// `https://www.dictionaryapi.com/api/v3/references/learners/json/${word}?key=${apiKey}`
-// "967010e7-0354-451e-b1ef-1b7db4abaae8"

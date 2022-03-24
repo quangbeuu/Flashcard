@@ -1,19 +1,15 @@
-import {
-  doc,
-  collection,
-  addDoc,
-  onSnapshot,
-  query,
-  where,
-} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
-
-import { db } from "../constants/common.js";
 import ButtonGroup from "./buttonGroup.js";
 import Login from "../page/Login.js";
 import Register from "../page/Register.js";
 import app from "../index.js";
 import { mockData } from "../assets/mockData.js";
 import ClassLearn from "../page/ClassLearn.js";
+import {
+  collection,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
+
+import { db } from "../constants/common.js";
 class Header {
   constructor() {
     this.$headerContainer = document.createElement("div");
@@ -137,14 +133,44 @@ class Header {
 
     this.$modalClassnameLabel.innerText = "Classname";
 
-    this.$modalCreateButton = document.createElement("button");
+    this.$modalDescriptionContainer = document.createElement("div");
+    this.$modalDescriptionContainer.setAttribute("class", "mb-[20px]");
+
+    this.$modalDescriptionInput = document.createElement("input");
+    this.$modalDescriptionInput.type = "text";
+    this.$modalDescriptionInput.placeholder = "Enter a Description";
+    this.$modalDescriptionInput.setAttribute(
+      "class",
+      "outline-none border-none w-full mb-[10px] text-[18px]"
+    );
+
+    this.$modalDescriptionLine = document.createElement("span");
+    this.$modalDescriptionLine.setAttribute(
+      "class",
+      "block h-[2px] bg-black w-full"
+    );
+
+    this.$modalDescriptionLabel = document.createElement("span");
+    this.$modalDescriptionLabel.setAttribute(
+      "class",
+      "mt-[10px] text-[14px] font-semibold text-[#939bb4] uppercase"
+    );
+
+    this.$modalDescriptionLabel.innerText = "Description";
+
+    this.$modalCreateButton = document.createElement("a");
     this.$modalCreateButton.setAttribute(
       "class",
-      "p-6 bg-[#8fb397] w-full text-[18px] font-bold text-white hover:bg-[#4b8063] transition linear duration-100"
+      "block text-center cursor-pointer p-6 bg-[#8fb397] w-full text-[18px] font-bold text-white hover:bg-[#4b8063] transition linear duration-100"
     );
-    this.$modalCreateButton.type = "submit";
     this.$modalCreateButton.innerText = "Create class";
     this.$modalCreateButton.addEventListener("click", this.goToClassLearnPage);
+
+    // Url
+    this.urlSearchParams = new URLSearchParams(window.location.search);
+    this.classId = this.urlSearchParams.get("id");
+
+    // this.getClassByid("123");
   }
   showModal = (e) => {
     e.preventDefault();
@@ -162,28 +188,21 @@ class Header {
     );
   };
 
-  goToClassLearnPage = async (e) => {
+  goToClassLearnPage = (e) => {
     e.preventDefault();
     // push data to firestore
     const className = this.$modalClassnameInput.value;
     const newClassDocument = {
+      classID: "123",
       className: className,
     };
 
     const classRef = collection(db, "classes");
-    const document = await addDoc(classRef, newClassDocument);
-    console.log("Doc", document.id);
-    const url = new URL(window.location);
-    url.searchParams.set("roomId", document.id);
-    window.history.pushState({}, "", url);
+    addDoc(classRef, newClassDocument);
 
-    const oneDocumentRef = doc(db, "classes", document.id);
-    onSnapshot(oneDocumentRef, (doc) => {
-      const data = doc.data();
-      const classLearnPage = new ClassLearn(data);
-      app.setActiveScreen(classLearnPage);
-    });
-    this.getClassByid(document.id);
+    const classLearnPage = new ClassLearn();
+    this.getClassByid("123", classLearnPage.$className);
+    app.setActiveScreen(classLearnPage);
   };
 
   goToRegisterPage = () => {
@@ -196,20 +215,17 @@ class Header {
     app.setActiveScreen(loginScreen);
   };
 
-  // getClassByid = (id) => {
-  //   // const classRef = collection(db, "classes");
-  //   // console.log(classRef);
-  //   // const q = query(classRef, where(classRef.id, "==", id));
-  //   // onSnapshot(q, (snapshot) => {
-  //   //   snapshot.docChanges().forEach((change) => {
-  //   //     if (change.type === "added") {
-  //   //       const data = change.doc.data();
-  //   //       const classLearnPage = new ClassLearn(data);
-  //   //       app.setActiveScreen(classLearnPage);
-  //   //     }
-  //   //   });
-  //   // });
-  // };
+  getClassByid = (id, className) => {
+    onSnapshot(classRef, (snapshot) => {
+      snapshot.docChanges.forEach((element) => {});
+    });
+    for (let item of mockData) {
+      if (item.classId === id) {
+        this.$modalCreateButton.href = `index.html?id=${item.classId}`;
+        className.innerText = item.className;
+      }
+    }
+  };
 
   render(container) {
     this.$headerContainer.appendChild(this.$headerLeft);
@@ -253,7 +269,11 @@ class Header {
     this.$modalClassnameContainer.appendChild(this.$modalClassnameLabel);
 
     this.$modalContent.appendChild(this.$modalInputContainer);
+    this.$modalInputContainer.appendChild(this.$modalDescriptionContainer);
 
+    this.$modalDescriptionContainer.appendChild(this.$modalDescriptionInput);
+    this.$modalDescriptionContainer.appendChild(this.$modalDescriptionLine);
+    this.$modalDescriptionContainer.appendChild(this.$modalDescriptionLabel);
     this.$modalInputContainer.appendChild(this.$modalCreateButton);
 
     container.appendChild(this.$modalContainer);

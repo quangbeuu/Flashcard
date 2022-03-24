@@ -202,6 +202,3 @@ class ClassLearn {
 }
 
 export default ClassLearn;
-
-// `https://www.dictionaryapi.com/api/v3/references/learners/json/${word}?key=${apiKey}`
-// "967010e7-0354-451e-b1ef-1b7db4abaae8"
