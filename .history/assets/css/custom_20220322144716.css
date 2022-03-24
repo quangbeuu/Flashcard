@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+body,
+input,
+button {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Fredoka", sans-serif; */
+  font-size: 14px;
+  line-height: 1;
+  color: #303545;
+}
+
+/* 1. Login */
+.f-calistoga {
+  font-family: "Calistoga", cursive;
+  font-size: 2.8rem;
+}
+
+.box-shadow1 {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* Làm đường line */
+
+.line {
+  position: relative;
+  text-align: center;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #e8e8e8;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-text {
+  padding: 10px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+}
+
+/* 2. Home */
+.bg-radient::after {
+  background: linear-gradient(
+    154.61deg,
+    rgba(19, 20, 27, 0) 40.48%,
+    black 107.87%
+  );
+  border-radius: 1.5rem;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* Why */
+.yellow-line {
+  height: 20px;
+  width: 100%;
+  background-image: url("../img/yellow-line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid-custom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 90px;
+}
+
+/* Slider */
+
+.quote-custom::before {
+  content: url("https://assets.quizlet.com/a/j/dist/app/i/prismic/quotes-open.76da8581ea3adc0.svg");
+  margin-right: 0.5rem;
+}
+
+.quote-custom::after {
+  content: url("https://assets.quizlet.com/a/j/dist/app/i/prismic/quotes-close.f05dbfc1b568217.svg");
+  margin-left: 0.5rem;
+}
+
+/* Create class */
+
+.shadow-button {
+  box-shadow: 0 0.125rem 0 0 #303545;
+}
+
+.line-green {
+  position: relative;
+}
+
+.line-green::before:hover {
+  content: "";
+  position: absolute;
+  background-color: #8fb397;
+  height: 3px;
+  width: 100%;
+  bottom: -3px;
+}
+
+.line-green:hover {
+  background-color: #8fb397;
+}

@@ -1,0 +1,5 @@
+class ClassInfo {
+  constructor() {}
+
+  render() {}
+}

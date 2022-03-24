@@ -1,0 +1,5 @@
+class ClassIcon {
+  constructor() {}
+
+  render() {}
+}

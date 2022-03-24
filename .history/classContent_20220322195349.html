@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning with flashcards - for free!!</title>
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="../assets/img/logo-icon.png" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- container -->
+      <div class="relative">
+        <!-- Header -->
+        <div
+          class="max-h-[63px] flex items-center justify-between py-[15px] px-[20px] fixed bg-white z-30 w-full border border-b-[0.0625rem] solid"
+        >
+          <!-- Left -->
+          <div class="flex items-center">
+            <!-- logo -->
+            <div>
+              
+                <img src="../assets/img/logo.png" alt="logo" class="h-[48px]" />
+              </a>
+            </div>
+            <!-- Menu -->
+            <ul
+              class="flex text-[16px] font-medium text-[#2e3856] items-center"
+            >
+              <li class="ml-[16px]"><a href="#">Home</a></li>
+              <li class="ml-[16px]"><a href="#">Mindmap</a></li>
+              <li class="ml-[16px]"><a href="#">About</a></li>
+              <li>
+                <button
+                  type="submit"
+                  class="text-[16px] font-medium ml-[18px] px-[12px] py-[6px] bg-[#8fb397] text-white rounded-[0.25rem] hover:bg-[#4b8063] transition duration-100ms ease-in"
+                >
+                  Create
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- Right -->
+          <div class="text-[#2e3856]">
+            <button
+              type="submit"
+              class="text-[16px] font-medium ml-[18px] px-[12px] py-[6px] bg-white rounded-[0.25rem] hover:bg-[#f6f7fb] transition duration-100ms ease-in"
+            >
+              Log in
+            </button>
+            <button
+              type="submit"
+              class="text-[16px] font-medium ml-[18px] px-[12px] py-[6px] bg-[#ffcd1f] rounded-[0.25rem] hover:bg-[#ffdc62] transition duration-100ms ease-in"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="p-[64px]">
+          <!-- Header -->
+          <div class="flex justify-between items-center mt-[50px]">
+            <div class="flex items-center">
+              <img
+                src="./assets/img/icon_class_header.png"
+                alt="icon_class_header"
+              />
+              <div class="text-[35px] font-semibold ml-[18px]">Class name</div>
+            </div>
+            <div class="flex">
+              <div
+                class="w-[38px] h-[38px] text-[20px] flex items-center justify-center rounded-full border border-[2px] solid border-[#d9dde8] text-[#646f90] font-bold transition duration-100ms ease-in ml-[10px] cursor-pointer"
+              >
+                  <ion-icon name="add-outline"></ion-icon>
+                </a>
+              </div>
+              <div
+                class="w-[38px] h-[38px] text-[20px] flex items-center justify-center rounded-full border border-[2px] solid border-[#d9dde8] text-[#646f90] font-bold transition duration-100ms ease-in ml-[10px] cursor-pointer"
+              >
+                  <ion-icon
+                    name="person-add-outline"
+                  ></ion-icon>
+                </a>
+              </div>
+              <div
+                class="w-[38px] h-[38px] text-[20px] flex items-center justify-center rounded-full border border-[2px] solid border-[#d9dde8] text-[#646f90] font-bold transition duration-100ms ease-in ml-[10px] cursor-pointer"
+              >
+                
+                  <ion-icon name="folder-outline"></ion-icon>
+                </a>
+              </div>
+              <div
+                class="w-[38px] h-[38px] text-[20px] flex items-center justify-center rounded-full border border-[2px] solid border-[#d9dde8] text-[#646f90] font-bold transition duration-100ms ease-in ml-[10px] cursor-pointer"
+              >
+                  <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Content -->
+          <div class="flex mt-[18px] border-b-[3px] mb-[4px]">
+            <div class="line-green mx-[16px] text-[16px] font-semibold text-[#303545] hover:text-[#8fb397] cursor-pointer">Sets</div>
+            <div class="line-green mx-[16px] text-[16px] font-semibold text-[#303545] hover:text-[#8fb397] cursor-pointer">Members</div>
+          </div>
+          <div class="flex">
+            <div class="flex flex-auto flex-col items-center justify-center p-10">
+              <h1 class="text-[30px] font-bold">This class doesn't have any sets yet</h1>
+              <p class="mt-[8px] text-[16px]">Add an existing set or create a new one to share</p>
+              <button
+              type="submit"
+              class="mt-[18px] text-[16px] text-white font-medium ml-[18px] px-[18px] py-[12px] bg-[#9ecbab] rounded-[0.25rem] hover:bg-[#67a778] transition duration-100ms ease-in"
+            >
+              Add a study set
+            </button>
+            </div>
+            <div class="flex-auto">
+              <p class="uppercase pt-10 text-[14px] tracking-[1px] font-semibold">Invitation link</p>
+              <div>
+                <input type="text" disabled value="Mindcarddddddddddddddddddddddddddddddddddddddddddddddddddddddd" class="border border-[2px] border-black rounded-md px-[12px] py-[6px]">
+                <button
+              type="submit"
+              class="mt-[8px] text-[16px] text-white font-medium ml-[18px] px-[18px] py-[8px] bg-[#9ecbab] rounded-[0.25rem] hover:bg-[#67a778] transition duration-100ms ease-in"
+            >
+              Add a study set
+            </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Thư viện Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+  </body>
+</html>
