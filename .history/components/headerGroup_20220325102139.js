@@ -5,7 +5,12 @@ import {
   onSnapshot,
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
-import { signOut } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+import {
+  doc,
+  collection,
+  addDoc,
+  onSnapshot,
+} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 import { auth, db } from "../constants/common.js";
 import ButtonGroup from "./buttonGroup.js";
 import Login from "../page/Login.js";

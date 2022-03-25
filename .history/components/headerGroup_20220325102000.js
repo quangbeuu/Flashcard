@@ -5,8 +5,7 @@ import {
   onSnapshot,
 } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore.js";
 
-import { signOut } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
-import { auth, db } from "../constants/common.js";
+import { db } from "../constants/common.js";
 import ButtonGroup from "./buttonGroup.js";
 import Login from "../page/Login.js";
 import Register from "../page/Register.js";
@@ -81,7 +80,6 @@ class Header {
 
     this.$buttonSignOut = new ButtonGroup("Sign out", "#ffcd1f", "#ffdc62");
     this.$buttonSignOut.$buttonCreate.classList.add("hidden");
-    this.$buttonSignOut.$buttonCreate.addEventListener("click", this.signOut);
     // Create CLass
 
     this.$modalContainer = document.createElement("div");
@@ -199,13 +197,9 @@ class Header {
   };
 
   signOut = () => {
-    signOut(auth)
-      .then(() => {
-        alert("You have been signed out");
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
+    signOut(auth).then(() => {
+      alert("You have been signed out");
+    });
   };
 
   // getClassByid = (id) => {

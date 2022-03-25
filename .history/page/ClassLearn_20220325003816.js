@@ -125,9 +125,6 @@ class ClassLearn {
       "class",
       "mt-[18px] text-[16px] text-white font-medium ml-[18px] px-[18px] py-[12px] bg-[#9ecbab] rounded-[0.25rem] hover:bg-[#67a778] transition duration-100ms ease-in"
     );
-    this.$noMemberButton.type = "submit";
-    this.$noMemberButton.innerText = "Add member";
-
     // inviteLink
     this.$inviteLinkContainer = document.createElement("div");
 
@@ -227,7 +224,6 @@ class ClassLearn {
     this.$studyMemberWrap.appendChild(this.$noMemberHeader);
     this.$studyMemberWrap.appendChild(this.$noMemberSubHeader);
     this.$studyMemberWrap.appendChild(this.$linkShare);
-    this.$studyMemberWrap.appendChild(this.$noMemberButton);
 
     this.$classStudySetContainer.appendChild(this.$inviteLinkContainer);
     this.$inviteLinkContainer.appendChild(this.$inviteLinkLabel);

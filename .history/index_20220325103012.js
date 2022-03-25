@@ -49,7 +49,7 @@ const app = new App(view);
 
 // const main = new Main();
 // const login = new Login();
-const classLearn = new ClassLearn(view);
-app.setActiveScreen(classLearn);
+// const classLearn = new ClassLearn(view);
+// app.setActiveScreen(classLearn);
 
 export default app;

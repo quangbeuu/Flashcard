@@ -111,22 +111,7 @@ class ClassLearn {
     this.$noMemberHeader.innerText =
       "Share this join link with your classmates";
 
-    this.$noMemberSubHeader = document.createElement("p");
-    this.$noMemberSubHeader.setAttribute("class", "mt-[18px] text-[16px]");
-    this.$noMemberSubHeader.innerText =
-      "Anyone with this URL can sign up and automatically join your class";
-
-    this.$linkShare = document.createElement("p");
-    this.$linkShare.setAttribute("class", "mt-10");
-    this.$linkShare.innerText = window.location.href;
-
-    this.$noMemberButton = document.createElement("button");
-    this.$noMemberButton.setAttribute(
-      "class",
-      "mt-[18px] text-[16px] text-white font-medium ml-[18px] px-[18px] py-[12px] bg-[#9ecbab] rounded-[0.25rem] hover:bg-[#67a778] transition duration-100ms ease-in"
-    );
-    this.$noMemberButton.type = "submit";
-    this.$noMemberButton.innerText = "Add member";
+    this.$noMemberSubHeader = document.createElement();
 
     // inviteLink
     this.$inviteLinkContainer = document.createElement("div");
@@ -226,8 +211,6 @@ class ClassLearn {
     this.$classStudySetContainer.appendChild(this.$studyMemberWrap);
     this.$studyMemberWrap.appendChild(this.$noMemberHeader);
     this.$studyMemberWrap.appendChild(this.$noMemberSubHeader);
-    this.$studyMemberWrap.appendChild(this.$linkShare);
-    this.$studyMemberWrap.appendChild(this.$noMemberButton);
 
     this.$classStudySetContainer.appendChild(this.$inviteLinkContainer);
     this.$inviteLinkContainer.appendChild(this.$inviteLinkLabel);

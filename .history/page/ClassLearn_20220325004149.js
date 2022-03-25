@@ -126,7 +126,8 @@ class ClassLearn {
       "mt-[18px] text-[16px] text-white font-medium ml-[18px] px-[18px] py-[12px] bg-[#9ecbab] rounded-[0.25rem] hover:bg-[#67a778] transition duration-100ms ease-in"
     );
     this.$noMemberButton.type = "submit";
-    this.$noMemberButton.innerText = "Add member";
+    this.$noMemberButton.innerText = "Copy link";
+    this.$noMemberButton.addEventListener("click");
 
     // inviteLink
     this.$inviteLinkContainer = document.createElement("div");

@@ -9,28 +9,21 @@ class App {
   constructor(view) {
     this.view = view;
     // view ta sẽ truyền vào thằng div id = app
-    // this.onAuthenticationListener();
+    this.onAuthenticationListener();
   }
 
   onAuthenticationListener() {
     onAuthStateChanged(auth, (user) => {
       const mainScreen = new Main();
-      app.setActiveScreen(mainScreen);
       if (user) {
         console.log("Có");
-        mainScreen.$header.$buttonLogIn.$buttonCreate.classList.add("hidden");
-        mainScreen.$header.$buttonSignUp.$buttonCreate.classList.add("hidden");
-        mainScreen.$header.$buttonSignOut.$buttonCreate.classList.remove(
-          "hidden"
+        mainScreen.$header.$buttonLogIn.$buttonCreate.setAttribute(
+          "text-[16px] font-medium ml-[18px] px-[12px] py-[6px] bg-[${bgcolor}] rounded-[0.25rem] hover:bg-[${hovercolor}] transition duration-100ms ease-in"
         );
       } else {
         mainScreen.$header.$buttonLogIn.$buttonCreate.classList.remove(
           "hidden"
         );
-        mainScreen.$header.$buttonSignUp.$buttonCreate.classList.remove(
-          "hidden"
-        );
-        mainScreen.$header.$buttonSignOut.$buttonCreate.classList.add("hidden");
       }
     });
   }
@@ -47,8 +40,8 @@ const view = document.getElementById("app");
 
 const app = new App(view);
 
-// const main = new Main();
-// const login = new Login();
+const main = new Main();
+const login = new Login();
 const classLearn = new ClassLearn(view);
 app.setActiveScreen(classLearn);
 

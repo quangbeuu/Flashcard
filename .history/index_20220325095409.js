@@ -9,7 +9,7 @@ class App {
   constructor(view) {
     this.view = view;
     // view ta sẽ truyền vào thằng div id = app
-    // this.onAuthenticationListener();
+    this.onAuthenticationListener();
   }
 
   onAuthenticationListener() {
@@ -30,7 +30,6 @@ class App {
         mainScreen.$header.$buttonSignUp.$buttonCreate.classList.remove(
           "hidden"
         );
-        mainScreen.$header.$buttonSignOut.$buttonCreate.classList.add("hidden");
       }
     });
   }
@@ -47,8 +46,8 @@ const view = document.getElementById("app");
 
 const app = new App(view);
 
-// const main = new Main();
-// const login = new Login();
+const main = new Main();
+const login = new Login();
 const classLearn = new ClassLearn(view);
 app.setActiveScreen(classLearn);
 
