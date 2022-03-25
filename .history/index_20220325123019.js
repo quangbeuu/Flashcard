@@ -9,7 +9,7 @@ class App {
   constructor(view) {
     this.view = view;
     // view ta sẽ truyền vào thằng div id = app
-    this.onAuthenticationListener();
+    // this.onAuthenticationListener();
   }
 
   onAuthenticationListener() {
