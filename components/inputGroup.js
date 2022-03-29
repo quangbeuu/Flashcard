@@ -7,14 +7,14 @@ class InputGroup {
     );
 
     this.$flexDiv = document.createElement("div");
-    this.$flexDiv.setAttribute("class", "flex");
+    this.$flexDiv.setAttribute("class", "flex w-full");
 
     this.$loginIcon = document.createElement("ion-icon");
     this.$loginIcon.setAttribute("name", iconType);
     this.$loginIcon.setAttribute("class", "w-[30px] h-[52px]");
 
     this.$inputWrap = document.createElement("div");
-    this.$inputWrap.setAttribute("class", "ml-[20px]");
+    this.$inputWrap.setAttribute("class", "ml-[20px] grow");
 
     this.$loginLabel = document.createElement("label");
     this.$loginLabel.setAttribute("for", idInput);
@@ -24,7 +24,10 @@ class InputGroup {
     this.$inputItem = document.createElement("input");
     this.$inputItem.type = inputType;
     this.$inputItem.setAttribute("id", idInput);
-    this.$inputItem.setAttribute("class", "outline-0 bg-[#f3f3f3] text-lg");
+    this.$inputItem.setAttribute(
+      "class",
+      "outline-0 bg-[#f3f3f3] text-lg w-full"
+    );
   }
 
   getValue() {

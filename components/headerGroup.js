@@ -10,11 +10,14 @@ import { auth, db } from "../constants/common.js";
 import ButtonGroup from "./buttonGroup.js";
 import Login from "../page/Login.js";
 import Register from "../page/Register.js";
+import Main from "../page/Main.js";
 import app from "../index.js";
-
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import ClassLearn from "../page/ClassLearn.js";
 class Header {
   constructor() {
+    // auth.currentUser.photoURL = "meo";
+    // console.log(auth.currentUser.photoURL);
     this.$headerContainer = document.createElement("div");
     this.$headerContainer.setAttribute(
       "class",
@@ -27,6 +30,7 @@ class Header {
 
     //Logo
     this.$headerLogoContainer = document.createElement("div");
+    this.$headerLogoContainer.addEventListener("click", this.goToHomePage);
     this.$headerLogoLink = document.createElement("a");
     this.$headerLogoLink.href = "#";
     this.$headerLogoImage = document.createElement("img");
@@ -42,6 +46,7 @@ class Header {
     );
     this.$home = document.createElement("li");
     this.$home.setAttribute("class", "ml-[16px]");
+    this.$home.addEventListener("click", this.goToHomePage);
     this.$homeLink = document.createElement("a");
     this.$homeLink.href = "#";
     this.$homeLink.innerText = "Home";
@@ -49,14 +54,14 @@ class Header {
     this.$mindmap = document.createElement("li");
     this.$mindmap.setAttribute("class", "ml-[16px]");
     this.$mindmapLink = document.createElement("a");
-    this.$mindmapLink.href = "#";
-    this.$mindmapLink.innerText = "Mindmap";
+    this.$mindmapLink.href = "../Dictionary Api/dic.html";
+    this.$mindmapLink.innerText = "Dic";
 
     this.$about = document.createElement("li");
     this.$about.setAttribute("class", "ml-[16px]");
     this.$aboutLink = document.createElement("a");
-    this.$aboutLink.href = "#";
-    this.$aboutLink.innerText = "About";
+    this.$aboutLink.href = "../Edit-flashcard/index.html";
+    this.$aboutLink.innerText = "Flashcard";
 
     // Button
     this.$buttonContainer = document.createElement("li");
@@ -66,7 +71,10 @@ class Header {
 
     // Right
     this.$headerRight = document.createElement("div");
-    this.$headerRight.setAttribute("class", "text-[#2e3856]");
+    this.$headerRight.setAttribute(
+      "class",
+      "flex text-[#2e3856] gap-[20px] items-center"
+    );
 
     this.$buttonLogIn = new ButtonGroup("Log in", "white", "#f6f7fb");
     this.$buttonLogIn.$buttonCreate.addEventListener(
@@ -82,6 +90,70 @@ class Header {
     this.$buttonSignOut = new ButtonGroup("Sign out", "#ffcd1f", "#ffdc62");
     this.$buttonSignOut.$buttonCreate.classList.add("hidden");
     this.$buttonSignOut.$buttonCreate.addEventListener("click", this.signOut);
+
+    // User
+    this.$userDiv = document.createElement("div");
+    this.$userDiv.setAttribute("class", "relative hidden");
+    this.$userDiv.addEventListener("click", this.toggleModal);
+    this.$userDivImage = document.createElement("img");
+    this.$userDivImage.src =
+      "https://images.unsplash.com/photo-1648371477306-42e7c73b3aca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80";
+    this.$userDivImage.setAttribute(
+      "class",
+      "w-8 h-8 rounded-full object-cover cursor-pointer"
+    );
+
+    // Modal User
+    this.$userModalContainer = document.createElement("div");
+    this.$userModalContainer.setAttribute(
+      "class",
+      "hidden absolute bg-white top-10 right-0 shadow-card rounded-[8px] w-[200px]  overflow-hidden"
+    );
+    this.$userModalInfoWrap = document.createElement("div");
+    this.$userModalInfoWrap.setAttribute(
+      "class",
+      "flex items-center w-full border-b-[1px] border-[#EDEFF4] px-[20px] py-[15px]"
+    );
+    this.$userImage = document.createElement("img");
+    this.$userImage.src =
+      "https://images.unsplash.com/photo-1648371477306-42e7c73b3aca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80";
+    this.$userImage.setAttribute(
+      "class",
+      "w-8 h-8 rounded-full object-cover cursor-pointer"
+    );
+    this.$userInfo = document.createElement("div");
+    this.$userInfo.setAttribute(
+      "class",
+      "ml-[10px] max-w-[120px] overflow-hidden"
+    );
+    this.$userName = document.createElement("p");
+    this.$userName.innerText = "quangvu9501";
+    this.$userName.setAttribute("class", "text-[12px] font-semibold");
+    this.$userEmail = document.createElement("p");
+    this.$userEmail.innerText = "superquang08@gmail.com";
+    this.$userEmail.setAttribute("class", "text-[12px] font-normal");
+
+    this.$userOption = document.createElement("div");
+    this.$userOption.setAttribute("class", "text-[14px] font-semibold");
+    this.$userProfile = document.createElement("div");
+    this.$userProfile.innerText = "Profile";
+    this.$userProfile.setAttribute(
+      "class",
+      "px-5 py-[12px] hover:text-[#ffcd1f] transition ease-in duration-100ms cursor-pointer"
+    );
+    this.$userSettings = document.createElement("div");
+    this.$userSettings.innerText = "Settings";
+    this.$userSettings.setAttribute(
+      "class",
+      "px-5 py-[12px] hover:text-[#ffcd1f] transition ease-in duration-100ms cursor-pointer"
+    );
+    this.$logout = document.createElement("div");
+    this.$logout.innerText = "Log out";
+    this.$logout.setAttribute(
+      "class",
+      "px-5 py-[12px] hover:text-[#ffcd1f] transition ease-in duration-100ms cursor-pointer"
+    );
+
     // Create CLass
 
     this.$modalContainer = document.createElement("div");
@@ -147,6 +219,33 @@ class Header {
     this.$modalCreateButton.type = "submit";
     this.$modalCreateButton.innerText = "Create class";
     this.$modalCreateButton.addEventListener("click", this.goToClassLearnPage);
+    this.onAuthenticationListener();
+  }
+
+  toggleModal = () => {
+    this.$userModalContainer.classList.toggle("hidden");
+  };
+
+  goToHomePage = () => {
+    window.history.replaceState({}, document.title, "/" + "index.html");
+    const mainPage = new Main();
+    app.setActiveScreen(mainPage);
+  };
+
+  onAuthenticationListener() {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        this.$buttonLogIn.$buttonCreate.classList.add("hidden");
+        this.$buttonSignUp.$buttonCreate.classList.add("hidden");
+        this.$buttonSignOut.$buttonCreate.classList.remove("hidden");
+        this.$userDiv.classList.remove("hidden");
+      } else {
+        this.$buttonLogIn.$buttonCreate.classList.remove("hidden");
+        this.$buttonSignUp.$buttonCreate.classList.remove("hidden");
+        this.$buttonSignOut.$buttonCreate.classList.add("hidden");
+        this.$userDiv.classList.add("hidden");
+      }
+    });
   }
   showModal = (e) => {
     e.preventDefault();
@@ -167,24 +266,30 @@ class Header {
   goToClassLearnPage = async (e) => {
     e.preventDefault();
     // push data to firestore
+    console.log(this._classid);
     const className = this.$modalClassnameInput.value;
     const newClassDocument = {
       className: className,
+      createdBy: auth.currentUser.email,
+      createdAt: new Date().valueOf(),
+      // classId: this._classid,
     };
 
     const classRef = collection(db, "classes");
-    const document = await addDoc(classRef, newClassDocument);
-    console.log("Doc", document.id);
-    const url = new URL(window.location);
-    url.searchParams.set("roomId", document.id);
-    window.history.pushState({}, "", url);
+    if (className.trim().length !== 0) {
+      const document = await addDoc(classRef, newClassDocument);
+      console.log("Doc", document.id);
+      const url = new URL(window.location);
+      url.searchParams.set("roomId", document.id);
+      window.history.pushState({}, "", url);
 
-    const oneDocumentRef = await doc(db, "classes", document.id);
-    onSnapshot(oneDocumentRef, (doc) => {
-      const data = doc.data();
-      const classLearnPage = new ClassLearn(data);
-      app.setActiveScreen(classLearnPage);
-    });
+      const oneDocumentRef = await doc(db, "classes", document.id);
+      onSnapshot(oneDocumentRef, (doc) => {
+        const data = doc.data();
+        const classLearnPage = new ClassLearn(document.id);
+        app.setActiveScreen(classLearnPage);
+      });
+    }
     // this.getClassByid(document.id);
   };
 
@@ -251,7 +356,20 @@ class Header {
     this.$headerRight.appendChild(this.$buttonLogIn.render());
     this.$headerRight.appendChild(this.$buttonSignUp.render());
     this.$headerRight.appendChild(this.$buttonSignOut.render());
+    this.$headerRight.appendChild(this.$userDiv);
+    this.$userDiv.appendChild(this.$userDivImage);
 
+    // when click avatar
+    this.$userDiv.appendChild(this.$userModalContainer);
+    this.$userModalContainer.appendChild(this.$userModalInfoWrap);
+    this.$userModalInfoWrap.appendChild(this.$userImage);
+    this.$userModalInfoWrap.appendChild(this.$userInfo);
+    this.$userInfo.appendChild(this.$userName);
+    this.$userInfo.appendChild(this.$userEmail);
+    this.$userModalContainer.appendChild(this.$userOption);
+    this.$userOption.appendChild(this.$userProfile);
+    this.$userOption.appendChild(this.$userSettings);
+    this.$userOption.appendChild(this.$logout);
     // Create Class
     this.$modalContainer.appendChild(this.$modalContent);
     this.$modalContent.appendChild(this.$modalHeaderContainer);
