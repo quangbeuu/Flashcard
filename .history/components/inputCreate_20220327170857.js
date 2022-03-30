@@ -1,0 +1,4 @@
+class InputCreate {
+  constructor() {}
+  render() {}
+}

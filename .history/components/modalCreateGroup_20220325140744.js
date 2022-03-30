@@ -1,0 +1,5 @@
+class ModalCreate {
+  constructor() {}
+
+  render() {}
+}

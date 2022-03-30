@@ -1,0 +1,5 @@
+class Dic {
+  constructor() {}
+
+  render() {}
+}

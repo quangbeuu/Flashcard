@@ -1,0 +1,6 @@
+class CardItem {
+    constructor(){}
+    render{
+        
+    }
+}

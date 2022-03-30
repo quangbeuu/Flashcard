@@ -1,0 +1,4 @@
+class FlashCardItem {
+  constructor() {}
+  render() {}
+}
