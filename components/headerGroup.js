@@ -60,8 +60,8 @@ class Header {
     this.$about = document.createElement("li");
     this.$about.setAttribute("class", "ml-[16px]");
     this.$aboutLink = document.createElement("a");
-    this.$aboutLink.href = "../Edit-flashcard/index.html";
-    this.$aboutLink.innerText = "Flashcard";
+    this.$aboutLink.href = "./myteam.html";
+    this.$aboutLink.innerText = "About us";
 
     // Button
     this.$buttonContainer = document.createElement("li");
